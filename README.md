@@ -1,4 +1,7 @@
 # TimeStamp
+<!-- För att köra programmet -->
+# npm install
+# npm run dev
 
 ("https://github.com/Eva-Li80/TimeStamp.git")
 
