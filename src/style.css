@@ -11,23 +11,38 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --navbar-color-open: #c5b9dc4d;
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+
 }
 
-a {
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
   color: #232761;
+} */
+
+html{
+  font-size: 75%;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   display: flex;
+  justify-content: center;
   place-items: center;
+  align-items: center;
+  gap: 5%;
   min-width: 320px;
   min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
 }
 
 h1 {
@@ -36,6 +51,86 @@ h1 {
   align-items: center;
   justify-content: center;
 }
+
+
+/*---------- Goran's kod ---------- */
+h4 {
+  font-size: 1.4em;
+  line-height: 1.1;
+  align-items:last baseline;
+  justify-content:last baseline;
+}
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: .1rem 20%;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.header .sticky {
+  border-bottom: .1rem solid rgba(0, 0, 0, .2);
+}
+
+.logo {
+  font-size: 2rem;
+  color: var(--text-color);
+  font-weight: 400;
+  cursor: default;
+}
+
+.navbar a {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-left: .2rem;
+  transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-color);
+}
+
+#menu-icon {
+  font-size: 3.6rem;
+  color: var(--text-color);
+  /* display: none; */
+}
+
+#menu-icon {
+  display: block;
+}
+.navbar {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 8rem 20%;
+  background: var(--bg-color);
+  border-top: .1rem solid rgba(0, 0, 0, .2);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+  background: var(--navbar-color-open);
+  /* display: none; */
+}
+
+.navbar .active {
+  display: block;
+}
+
+.navbar a {
+  display: block;
+  font-size: 1rem;
+  margin: .6rem 0;
+}
+
+
+/*---------- Slut på Goran's kod ---------- */
 
 #app {
   max-width: 1280px;
