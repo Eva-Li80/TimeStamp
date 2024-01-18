@@ -1,9 +1,5 @@
 /* STYLING */
-import "./modulePages/sidaett";
-import "./Functions/functions";
-import "./Functions/mixins";
-import "./Variables/variables";
-import "./Base/base";
+import "../scssStyling/main.scss"
 
 /* IMPORT OF TS */
 import { setupPage } from './tsPages/page'
