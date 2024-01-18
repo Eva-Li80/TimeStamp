@@ -19,5 +19,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/typescript"]
+  "include": ["src/typescript", "src/typescript/tsPages"]
 }
