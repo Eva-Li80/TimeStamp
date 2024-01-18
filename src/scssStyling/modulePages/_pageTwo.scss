@@ -1,1 +1,44 @@
+.page-two {
+    height: 100vh;
+  background-color: $color-pink;
+  @include flexdirection(column);
+  .first-block {
+    @include flexdirection(row);
+    margin-top: 20px;
+    .left,
+    .number,
+    .right {
+      margin: 20px;
+      font-size: $base-size-large;
+    }
+  }
 
+  .container-two {
+    display: flex;
+    flex-direction: column;
+   
+
+    .box-one, .box-two{
+        display: flex;
+        flex-direction: row;
+        width: 100%;  
+        margin-bottom: 20px;
+        
+        div{
+            margin: 5px
+        }
+
+        .box{
+            width: 25px;
+            height: 25px;
+            border-radius: 10%;
+            border: 2px solid $color-black;
+        }
+      }
+  }
+  .start-timer{
+    padding: 10px 60px;
+    margin-top: 20px;
+  }
+ 
+}

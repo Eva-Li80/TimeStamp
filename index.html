@@ -1,30 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/scssStyling/main.scss">
+    <link rel="stylesheet" href="./src/scssStyling/main.scss" />
     <title>Vite + TS</title>
   </head>
   <body>
     <div id="app">
       <div class="page-two">
-        <div>pil</div>
+        <div class="first-block">
+          <div class="left">pil</div>
+          <div class="number">10</div>
+          <div class="right">pil</div>
+        </div>
+        <p>minutes</p>
         <div class="container-two">
-          <div>10</div>
-          <p>minutes</p>
+          <div class="box-one">
+            <div class="box">box</div>
+            <div>intervals</div>
+          </div>
+          <div class="box-two">
+            <div class="box">box</div>
+            <div>5 min break / intervals</div>
+          </div>
         </div>
-        <div>pil</div>
-        <div class="box-one">
-          <div>box</div>
-          <p>intervals</p>
-        </div>
-        <div class="box-two">
-          <div>box</div>
-          <p> 5 min break / intervals</p>
-        </div>
-        <button>Start timer</button>
+        <button class="start-timer">Start timer</button>
       </div>
     </div>
     <script type="module" src="/src/main.ts"></script>

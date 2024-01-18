@@ -2,12 +2,13 @@
 @import "./Functions/functions";
 @import "./Functions/mixins";
 
+
+@import "./Variables/variables";
+
 //pages
 @import "./modulePages/sidaett";
 @import "./modulePages/pageTwo";
 
-
-@import "./Variables/variables";
 
 //base & layout
 @import "./Base/base";
