@@ -4,7 +4,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(250, 250, 250, 0.87);
+  color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
   font-synthesis: none;
@@ -19,7 +19,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #232761;
 }
 
 body {
@@ -33,13 +33,18 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  align-items: center;
+  justify-content: center;
 }
 
 #app {
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 0;
   padding: 2rem;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-left: 35.5%;
 }
 
 .logo {
@@ -49,10 +54,10 @@ h1 {
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #ea07aad4);
 }
 .logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #3178c6aa);
+  filter: drop-shadow(0 0 2em #c3de0eaa);
 }
 
 .card {
@@ -60,14 +65,14 @@ h1 {
 }
 
 .read-the-docs {
-  color: #888;
+  color: #efeaea;
 }
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   padding: 0.6em 1.2em;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
@@ -75,7 +80,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #03f803;
 }
 button:focus,
 button:focus-visible {
@@ -84,13 +89,13 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #e1660d;
+    background-color: #000000;
   }
   a:hover {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #ed8a09;
   }
 }
