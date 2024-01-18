@@ -1,8 +1,11 @@
-@import "./modulePages/sidaett";
-
 //variables & functions
 @import "./Functions/functions";
 @import "./Functions/mixins";
+
+//pages
+@import "./modulePages/sidaett";
+@import "./modulePages/pageTwo";
+
 
 @import "./Variables/variables";
 
