@@ -24,5 +24,5 @@ const timer = new Timer();
 export const analogTimer = (time: number, type: string abort:boolean): void =>
 
     let currentTime = 0;
-    let totalTime = * 60;
+    let totalTime = * 60; 
 
