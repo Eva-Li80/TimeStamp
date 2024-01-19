@@ -11,11 +11,22 @@
       margin: 20px;
       font-size: $base-size-large;
     }
+    .number{
+        font-size: $base-size-xlarge;
+    }
+  
+    .left, .right{
+        color: $color-gray-medium;
+        margin: 40px;
+    }
   }
 
   .container-two {
     display: flex;
     flex-direction: column;
+    margin-top: 80px;
+    margin-left: -20px;
+    
    
 
     .box-one, .box-two{
@@ -28,6 +39,11 @@
             margin: 5px
         }
 
+        .intervals{
+            font-size: $base-size-medium;
+            margin-top: 10px;
+        }
+
         .box{
             width: 25px;
             height: 25px;
@@ -37,8 +53,12 @@
       }
   }
   .start-timer{
-    padding: 10px 60px;
+    padding: 10px 50px;
     margin-top: 20px;
+    border-radius: 3px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: $base-size-medium;
   }
  
 }
