@@ -1,11 +1,6 @@
 /* STYLING */
-import "./modulePages/sidaett";
-import "./Functions/functions";
-import "./Functions/mixins";
-import "./Variables/variables";
-import "./Base/base";
 
 /* IMPORT OF TS */
-import { setupPage } from './tsPages/page'
+import { page5 } from './tsPages/page5'
 
-setupPage()
+page5()
