@@ -5,7 +5,7 @@
   @include flexdirection(column);
 
   h1 {
-    font-size: $base-size-large;
+    font-size: $base-size-xlarge;
   }
 
   p {
@@ -14,6 +14,6 @@
 
   i {
     color: $color-white;
-    font-size: $base-size-large;
+    font-size: $base-size-xlarge;
   }
 }
