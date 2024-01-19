@@ -5,3 +5,4 @@ import "../scssStyling/main.scss"
 import { setupPage } from './tsPages/page'
 
 setupPage()
+console.log("Hello World from main.ts")
