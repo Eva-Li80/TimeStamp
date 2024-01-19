@@ -2,11 +2,10 @@
   height: 100vh;
   background: radial-gradient(
     circle at center,
-    rgb(80, 79, 79) 0,
-    rgb(62, 62, 62) 10%,
-    rgb(43, 43, 43) 20%,
-    rgb(27, 26, 26) 30%,
-    rgb(4, 4, 4) 40%
+    rgb(53, 53, 53) 13%,
+    rgb(38, 38, 38) 13% 23%,
+    rgb(28, 28, 28) 23% 33%,
+    rgb(0, 0, 0) 33%
   );
   color: $color-white;
   @include flexdirection(column);
