@@ -1,5 +1,5 @@
 .page-two {
-    height: 100vh;
+  height: 100vh;
   background-color: $color-pink;
   @include flexdirection(column);
 
@@ -12,48 +12,54 @@
       margin: 20px;
       font-size: $base-size-large;
     }
-    .number{
-        font-size: $base-size-xlarge;
+    .number {
+      font-size: $base-size-xlarge;
     }
-    .left, .right{
-        color: $color-gray-medium;
-        margin: 40px;
+    .left,
+    .right {
+      color: $color-gray-medium;
+      margin: 40px;
+    }
+    .left,
+    .right:hover {
+      cursor: pointer;
     }
   }
 
   .second-block {
-    display: flex;
-    flex-direction: column;
+    @include justdirection(column);
     margin-top: 80px;
     margin-left: -20px;
 
-    .box-one, .box-two{
-        display: flex;
-        flex-direction: row;
-        width: 100%;  
-        margin-bottom: 20px;
-        
-        div{
-            margin: 5px
-        }
-        .intervals{
-            font-size: $base-size-medium;
-            margin-top: 10px;
-        }
-        .box{
-            width: 25px;
-            height: 25px;
-            border-radius: 10%;
-            border: 2px solid $color-black;
-        }
+    .box-one,
+    .box-two {
+      @include justdirection(row);
+      width: 100%;
+      margin-bottom: 20px;
+
+      div {
+        margin: 5px;
       }
+      .intervals {
+        font-size: $base-size-medium;
+        margin-top: 10px;
+      }
+      .box {
+        width: 25px;
+        height: 25px;
+        border-radius: 10%;
+        border: 2px solid $color-black;
+        cursor: pointer;
+      }
+    }
   }
-  .start-timer{
+  .start-timer {
     padding: 10px 50px;
     margin-top: 20px;
     border-radius: 3px;
     font-weight: 700;
     letter-spacing: 0.5px;
     font-size: $base-size-medium;
+    cursor: pointer;
   }
 }
