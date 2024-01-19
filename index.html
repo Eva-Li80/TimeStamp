@@ -1,14 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/scssStyling/main.scss">
+    <link rel="stylesheet" href="src/scssStyling/main.scss">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+
     <title>Vite + TS</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="./src/typescript/main.ts"></script>
+    <div id="app">
+      <div class="page-two">
+        <div class="first-block">
+          <div class="left"><i class="fa-solid fa-chevron-left"></i>
+          </div>
+          <div class="number">10</div>
+          <div class="right"><i class="fa-solid fa-chevron-right"></i></div>
+        </div>
+        <div class="minutes">minutes</div>
+        <div class="second-block">
+          <div class="box-one">
+            <div class="box"></div>
+            <div class="intervals">intervals</div>
+          </div>
+          <div class="box-two">
+            <div class="box"></div>
+            <div class="intervals">5 min break / intervals</div>
+          </div>
+        </div>
+        <button class="start-timer">START TIMER</button>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

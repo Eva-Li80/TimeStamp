@@ -1,0 +1,12 @@
+@mixin flexdirection($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin justdirection($direction) {
+    display: flex;
+    flex-direction: $direction;
+  }
+  
