@@ -1,8 +1,10 @@
 /* STYLING */
-import "../scssStyling/main.scss"
+import "../scssStyling/main.scss";
 
 /* IMPORT OF TS */
-import { setupPage } from './tsPages/page'
 
-setupPage()
-console.log("Hello World from main.ts")
+import { startPage } from "./tsPages/startPage";
+
+startPage();
+
+console.log("Hello World from main.ts");

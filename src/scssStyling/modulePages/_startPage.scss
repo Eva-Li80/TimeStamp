@@ -1,0 +1,19 @@
+.start-page {
+  height: 100vh;
+  background-color: $color-black;
+  color: $color-white;
+  @include flexdirection(column);
+
+  h1 {
+    font-size: $base-size-large;
+  }
+
+  p {
+    font-size: $base-size-medium;
+  }
+
+  i {
+    color: $color-white;
+    font-size: $base-size-large;
+  }
+}
