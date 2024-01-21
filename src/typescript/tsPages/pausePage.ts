@@ -11,7 +11,7 @@ export function pauseTimerPage() {
   const icon = document.createElement("i");
   icon.classList.add("bx", "bx-pause");
   const h1 = document.createElement("h1");
-  h1.innerHTML = "PAUSE AND BREATHE";
+  h1.innerHTML = "Pause & breath";
   const countDownDiv = document.createElement("div");
   countDownDiv.className = "countdown";
   const values = document.createElement("div");
@@ -27,7 +27,7 @@ export function pauseTimerPage() {
   });
 
   const button = document.createElement("button");
-  button.innerHTML = "NO PAUSE, GO NOW";
+  button.innerHTML = "NO PAUSE, GO NOW!";
   button.addEventListener("click", () => {
     timer.stop();
   });
