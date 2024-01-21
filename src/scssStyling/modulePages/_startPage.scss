@@ -1,19 +1,43 @@
-.start-page {
-  height: 100vh;
-  background-color: $color-black;
-  color: $color-white;
-  @include flexdirection(column);
-
-  h1 {
-    font-size: $base-size-xlarge;
-  }
-
-  p {
-    font-size: $base-size-medium;
-  }
-
-  i {
+@media only screen and (max-width: 600px) {
+  .start-page {
+    height: 100vh;
+    background-color: $color-black;
     color: $color-white;
-    font-size: $base-size-xlarge;
+    @include flexdirection(column);
+
+    h1 {
+      font-size: $base-size-large;
+    }
+
+    p {
+      font-size: $base-size-medium;
+    }
+
+    i {
+      color: $color-white;
+      font-size: 5em;
+    }
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .start-page {
+    height: 100vh;
+    background-color: $color-black;
+    color: $color-white;
+    @include flexdirection(column);
+
+    h1 {
+      font-size: $base-size-xlarge;
+    }
+
+    p {
+      font-size: $base-size-medium;
+    }
+
+    i {
+      color: $color-white;
+      font-size: 5em;
+    }
   }
 }
