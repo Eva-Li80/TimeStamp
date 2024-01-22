@@ -1,0 +1,89 @@
+@media only screen and (max-width: 600px) {
+  .pause-page {
+    height: 100vh;
+    background: radial-gradient(
+      circle at center,
+      rgb(25, 25, 25) 13%,
+      rgb(18, 18, 18) 13% 23%,
+      rgb(13, 13, 13) 23% 33%,
+      rgb(8, 8, 8) 33% 53%,
+      rgb(0, 0, 0) 53%
+    );
+    color: $color-white;
+    @include flexdirection(column);
+
+    h1 {
+      font-size: $base-size-medium;
+    }
+
+    button {
+      font-size: $base-size-medium;
+    }
+
+    i {
+      color: $color-white;
+      font-size: 5em;
+      margin-top: 2em;
+    }
+
+    .values {
+      font-size: $base-size-large;
+    }
+
+    button {
+      background: none;
+      color: inherit;
+      border: 1px solid $color-white;
+      padding: 5px;
+      margin: 1em;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+    }
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .pause-page {
+    height: 100vh;
+    background: radial-gradient(
+      circle at center,
+      rgb(25, 25, 25) 13%,
+      rgb(18, 18, 18) 13% 23%,
+      rgb(13, 13, 13) 23% 33%,
+      rgb(8, 8, 8) 33% 53%,
+      rgb(0, 0, 0) 53%
+    );
+    color: $color-white;
+    @include flexdirection(column);
+
+    h1 {
+      font-size: $base-size-xlarge;
+    }
+
+    button {
+      font-size: $base-size-medium;
+    }
+
+    i {
+      color: $color-white;
+      font-size: 10em;
+      margin-top: 1.5em;
+    }
+
+    .values {
+      font-size: $base-size-large;
+    }
+
+    button {
+      background: none;
+      color: inherit;
+      border: 1px solid $color-white;
+      padding: 5px;
+      margin: 1em;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+    }
+  }
+}

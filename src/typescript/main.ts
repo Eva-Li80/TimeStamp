@@ -1,8 +1,12 @@
 /* STYLING */
-import "../scssStyling/main.scss"
+import "../scssStyling/main.scss";
+import { pauseTimerPage } from "./tsPages/pausePage";
 
 /* IMPORT OF TS */
-import { setupPage } from './tsPages/page'
 
-setupPage()
-console.log("Hello World from main.ts")
+import { startPage } from "./tsPages/startPage";
+
+startPage();
+pauseTimerPage();
+
+console.log("Hello World from main.ts");
