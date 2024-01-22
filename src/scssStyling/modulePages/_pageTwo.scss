@@ -1,59 +1,49 @@
-.page-two {
+.timer-container {
   height: 100vh;
   background-color: $color-pink;
   @include flexdirection(column);
 
-  .first-block {
+  .time-setter {
     @include flexdirection(row);
     margin-top: 20px;
-    .left,
-    .number,
-    .right {
+    button,
+    #time-display {
       margin: 20px;
       font-size: $base-size-large;
     }
-    .number {
+    #time-display {
       font-size: $base-size-xlarge;
     }
-    .left,
-    .right {
+    button {
       color: $color-gray-medium;
       margin: 40px;
     }
-    .left,
-    .right:hover {
+    button:hover {
       cursor: pointer;
     }
   }
 
-  .second-block {
+  .options {
     @include justdirection(column);
     margin-top: 80px;
     margin-left: -20px;
 
-    .box-one,
-    .box-two {
+    label {
       @include justdirection(row);
       width: 100%;
       margin-bottom: 20px;
 
-      div {
+      input[type="checkbox"] {
         margin: 5px;
       }
       .intervals {
         font-size: $base-size-medium;
         margin-top: 10px;
       }
-      .box {
-        width: 25px;
-        height: 25px;
-        border-radius: 10%;
-        border: 2px solid $color-black;
-        cursor: pointer;
-      }
     }
   }
-  .start-timer {
+  .start-button,
+  .stop-button {
     padding: 10px 50px;
     margin-top: 20px;
     border-radius: 3px;
