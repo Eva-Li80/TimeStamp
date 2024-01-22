@@ -10,10 +10,7 @@ import { pauseTimerPage } from "./tsPages/pausePage";
 import { startPage } from "./tsPages/startPage";
 
 startPage();
-pauseTimerPage();
 
 console.log("Hello World from main.ts");
 
-
 /* Goran's kod */
-
