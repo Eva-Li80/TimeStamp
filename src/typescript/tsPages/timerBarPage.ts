@@ -2,7 +2,7 @@ import { Timer } from "easytimer.js";
 
 
 const minutes:number = 0;
-const seconds:number = 10
+const seconds:number = 20
 
 export function getTimerBar(): void {
     const timer = new Timer();
