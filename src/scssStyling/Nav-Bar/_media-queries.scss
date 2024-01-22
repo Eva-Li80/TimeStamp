@@ -1,0 +1,20 @@
+/* Goran's kod */
+// Responsive stil för att förändra till mobil storlek 
+@media (max-width: 800px) {
+    // gömd på mobile styles
+    .hideOnMobile {
+        display: none;
+    }
+
+    // Meny knap styles för mobil
+    .menu-button {
+        display: block;
+    }
+
+    // Sidebar styles för mobil
+    .sidebar {
+        width: 100%;
+    }
+} 
+
+/* slut på Goran's kod */

@@ -1,0 +1,35 @@
+/* Goran's kod */
+
+// Sidebar styles
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, .1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    // Sidebar list styles
+    li {
+        width: 100%;
+
+        // Sidebar link styles
+        a {
+            width: 100%;
+        }
+    }
+}
+
+// Menu button styles
+.menu-button {
+    display: none;
+}
+
+/* slut på Goran's kod */
