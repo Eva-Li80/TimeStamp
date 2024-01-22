@@ -2,6 +2,8 @@
 <!-- För att köra programmet -->
 # npm install
 # npm run dev
+# npm i vite@latest ./
+# npm i -D sass
 
 ("https://github.com/Eva-Li80/TimeStamp.git")
 

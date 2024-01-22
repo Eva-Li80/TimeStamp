@@ -1,0 +1,43 @@
+/* Goran's kod */
+
+// Navigation styles
+nav {
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .1);
+
+    // Navigation list styles
+    ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        // Navigation list item styles
+        li {
+            height: 50px;
+
+            // Navigation link styles
+            a {
+                height: 100%;
+                padding: 0 30px;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: rgb(221, 111, 8);
+                font-size: 20px;
+
+                &:hover {
+                    background-color: #f0f0f0;
+                }
+            }
+
+            &:first-child {
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+/* slut på Goran's kod */

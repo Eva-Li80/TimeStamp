@@ -2,15 +2,25 @@
 @import "./Functions/functions";
 @import "./Functions/mixins";
 
-
 @import "./Variables/variables";
 
 //pages
 @import "./modulePages/sidaett";
 @import "./modulePages/pageTwo";
-
+@import "./modulePages/startPage";
+@import "./modulePages/pauseTimerPage";
 
 //base & layout
 @import "./Base/base";
 
 //components button, card, navbar mm
+
+
+
+// Goran's kod
+
+@import "./Nav-Bar/reset";
+// @import "./Nav-Bar/body"; 
+@import "./Nav-Bar/nav";
+@import "./Nav-Bar/sidebar";
+@import "./Nav-Bar/media-queries";

@@ -11,10 +11,11 @@
   "devDependencies": {
     "sass": "^1.70.0",
     "typescript": "^5.2.2",
-    "vite": "^5.0.8"
+    "vite": "^5.0.11"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.1",
+    "boxicons": "^2.1.4",
     "easytimer.js": "^4.6.0",
     "moment": "^2.30.1"
   }
