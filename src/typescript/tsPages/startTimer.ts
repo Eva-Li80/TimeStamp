@@ -80,6 +80,9 @@ export function createTimer(): TimerConfig {
 
           if (duration <= 0 && breakCheckbox.checked) {
             pauseTimerPage();
+            clearInterval(countdown);
+            isRunning = false;
+            console.log("Finished");
           } else if (duration <= 0) {
             clearInterval(countdown);
             isRunning = false;
