@@ -1,0 +1,20 @@
+/* Goran's kod */
+// Responsive styles
+@media (max-width: 800px) {
+    // Hide on mobile styles
+    .hideOnMobile {
+        display: none;
+    }
+
+    // Menu button styles for mobile
+    .menu-button {
+        display: block;
+    }
+
+    // Sidebar styles for mobile
+    .sidebar {
+        width: 100%;
+    }
+} 
+
+/* slut på Goran's kod */
