@@ -1,0 +1,71 @@
+.page-five {
+    background-color: $color-gray-dark;
+    @include justdirection(column);
+    height: 100vh;
+  
+    .header-interval{
+      color: $color-white;
+      padding: 20px;
+      background-color: $color-gray-light;
+      display: flex;
+      align-items: center;
+      .ic {
+        font-size: $base-size-large;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      .interval {
+        flex: 1;
+        text-align: center;
+        font-size: $base-size-large;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+    }
+  
+    .timer-bar-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      
+    #timer-bar {
+      background: linear-gradient(
+        to left,
+        $color-gray-dark,
+        $color-gray-light,
+        $color-pink-light,
+        $color-gray-light,
+        $color-gray-dark
+      );
+      box-shadow: 5px 5px 20px $color-gray-light;
+      border-radius: 5px;
+      height: 300px;
+      width: 95%;
+      transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    }
+    }
+  
+  
+    .btn-container {
+      color: $color-white;
+      padding: 10px;
+      background-color: $color-gray-light;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .abort-timer {
+        padding: 10px 50px;
+        border-radius: 3px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        font-size: $base-size-medium;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  
+  
