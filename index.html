@@ -18,7 +18,6 @@
   </head>
   <body>
     <div id="app">
-
       <!--START-PAGE-->
       <div class="start-page">
         <i class="bx bx-menu bx-rotate-90"></i>
@@ -28,31 +27,32 @@
       <!-- TIMER START PAGE-->
       <div class="timer-container">
         <div class="time-setter">
-            <button id="decrease-time" class="time-adjust">Decrease</button>
-            <div id="time-display" class="time-display">10 minutes</div>
-            <button id="increase-time" class="time-adjust">Increase</button>
+          <button id="decrease-time" class="time-adjust">Decrease</button>
+          <div id="time-display" class="time-display">10 minutes</div>
+          <button id="increase-time" class="time-adjust">Increase</button>
         </div>
         <div class="options">
-            <input type="checkbox" id="interval">interval</label>
-            <input type="checkbox" id="break-interval">5 min break / interval</label>
+          <label>
+            <input type="checkbox" id="interval" />
+            interval</label
+          >
+          <label for="break-interval">5 min break / interval</label>
+          <input type="checkbox" id="break-interval" />
         </div>
         <button id="start-timer" class="start-button">START TIMER</button>
         <button id="stop-timer" class="stop-button">STOP TIMER</button>
-    </div>
-
-    <!-- -------- -->
-    <!--PAUSE PAGE-->
-    <div class="pause-page">
-      <i class="bx bx-pause"></i>
-      <h1>Pause & breath</h1>
-      <div class="countdown">
-        <div class="values"></div>
       </div>
-      <button id="pause-btn">NO PAUSE, GO NOW!</button>
-    </div>
 
-
-
+      <!-- -------- -->
+      <!--PAUSE PAGE-->
+      <div class="pause-page">
+        <i class="bx bx-pause"></i>
+        <h1>Pause & breath</h1>
+        <div class="countdown">
+          <div class="values"></div>
+        </div>
+        <button id="pause-btn">NO PAUSE, GO NOW!</button>
+      </div>
     </div>
     <script type="module" src="./src/typescript/main.ts"></script>
   </body>
