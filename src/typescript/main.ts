@@ -1,8 +1,3 @@
-/* STYLING */
-import "../scssStyling/main.scss"
+import { duration, isRunning, LOCAL_STORAGE_KEY_MINUTES, LOCAL_STORAGE_KEY_SECONDS } from "./tsPages/startTimer";
 
-/* IMPORT OF TS */
-import { setupPage } from './tsPages/page'
-
-setupPage()
 console.log("Hello World from main.ts")
