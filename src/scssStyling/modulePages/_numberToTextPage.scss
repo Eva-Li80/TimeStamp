@@ -1,0 +1,81 @@
+.page-six {
+  height: 100vh;
+
+  @include justdirection(column);
+
+  .header-interval {
+    color: $color-white;
+    padding: 20px;
+    background-color: rgb(112, 148, 149);
+    display: flex;
+    align-items: center;
+    .ic {
+      font-size: $base-size-large;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .interval {
+      flex: 1;
+      text-align: center;
+      font-size: $base-size-large;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  }
+  .timer-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      to left,
+      $color-gray-dark,
+      $color-gray-medium,
+      
+      $color-green-light,
+      
+      $color-gray-medium,
+      $color-gray-dark
+    );
+    .time-left {
+      @include justdirection(column);
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      width: 800px;
+      height: 300px;
+
+      @media only screen and (min-width: 600px) {
+        width: 100%;
+        height: auto;
+        color: $color-white;
+
+        #minutes,
+        #seconds {
+          font-size: $base-size-xlarge;
+          font-weight: bold;
+          margin: 20px;
+          color: $color-white;
+        }
+      }
+    }
+  }
+
+  .btn-container {
+    color: $color-white;
+    padding: 10px;
+    background-color: rgb(112, 148, 149);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .abort-timer {
+      padding: 10px 50px;
+      border-radius: 3px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      font-size: $base-size-medium;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+}
