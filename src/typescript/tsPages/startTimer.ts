@@ -5,11 +5,13 @@ type TimerConfig = {
   isRunning: boolean;
   LOCAL_STORAGE_KEY_SECONDS: string;
   LOCAL_STORAGE_KEY_MINUTES: string;
+  LOCAL_STORAGE_ISRUNNING: string;
 };
 
 export function createTimer(): TimerConfig {
   const LOCAL_STORAGE_KEY_SECONDS = "timerDurationSeconds";
   const LOCAL_STORAGE_KEY_MINUTES = "timerDurationMinutes";
+  const LOCAL_STORAGE_ISRUNNING = "FALSE";
   let duration: number = 600;
   const defaultDuration: number = 600;
   let isRunning: boolean = false;
@@ -72,6 +74,7 @@ export function createTimer(): TimerConfig {
     startTimerBtn.addEventListener("click", () => {
       if (!isRunning) {
         isRunning = true;
+        localStorage.setItem(LOCAL_STORAGE_ISRUNNING, "TRUE");
         console.log("Started");
 
         countdown = setInterval(() => {
@@ -86,6 +89,7 @@ export function createTimer(): TimerConfig {
           } else if (duration <= 0) {
             clearInterval(countdown);
             isRunning = false;
+            localStorage.setItem(LOCAL_STORAGE_ISRUNNING, "TRUE");
             console.log("Finished");
           }
         }, 1000);
@@ -113,5 +117,6 @@ export function createTimer(): TimerConfig {
     isRunning,
     LOCAL_STORAGE_KEY_MINUTES,
     LOCAL_STORAGE_KEY_SECONDS,
+    LOCAL_STORAGE_ISRUNNING,
   };
 }
