@@ -1,0 +1,21 @@
+.page-7 {
+  height: 100vh;
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  circle {
+    stroke-width: 5px;
+    fill: transparent;
+    stroke-linecap: round;
+  }
+
+  #circle1 {
+    stroke: rgba(0, 0, 0, 0.4);
+  }
+
+  #circle2 {
+    stroke: #bbe1fa;
+    transition: 1s linear;
+  }
+}

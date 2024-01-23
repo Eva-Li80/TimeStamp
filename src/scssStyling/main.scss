@@ -12,18 +12,17 @@
 @import "./modulePages/Times-UP";
 @import "./modulePages/numberToTextPage";
 @import "./modulePages/timerbarPage";
+@import "./modulePages/circleTimerPage";
 
 //base & layout
 @import "./Base/base";
 
 //components button, card, navbar mm
 
-
-
 // Goran's kod
 
 @import "./Nav-Bar/reset";
-// @import "./Nav-Bar/body"; 
+// @import "./Nav-Bar/body";
 @import "./Nav-Bar/nav";
 @import "./Nav-Bar/sidebar";
 @import "./Nav-Bar/media-queries";

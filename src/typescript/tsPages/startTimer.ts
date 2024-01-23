@@ -2,6 +2,7 @@ import { pauseTimerPage } from "./pausePage";
 import { getTimerBar } from "./timerBarPage";
 import { startTimer } from "./numberToTextPage";
 import Timer from "easytimer.js";
+import { CircleTimer } from "./circleTimer";
 
 export function createTimer() {
   let duration: number = 600;
@@ -62,6 +63,7 @@ export function createTimer() {
         //Starta klockorna här
         getTimerBar(timer);
         startTimer(timer);
+        CircleTimer(timer);
 
         timer.addEventListener("targetAchieved", function (e) {
           pauseTimerPage(pause);
@@ -76,6 +78,7 @@ export function createTimer() {
         });
         getTimerBar(timer);
         startTimer(timer);
+        CircleTimer(timer);
       }
     });
   }
