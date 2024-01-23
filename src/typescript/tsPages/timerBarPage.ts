@@ -30,11 +30,11 @@ function updateTimerBar(currentMinutes: number, currentSeconds: number): void {
   const totalSeconds = currentMinutes * 60 + currentSeconds;
   const percent = (totalSeconds / (currentMinutes * 60 + currentSeconds)) * 100;
 
-  const height: number = Math.max(0, percent);
+  const width: number = Math.max(0, percent);
 
   const timerBar = document.getElementById("timer-bar") as HTMLElement;
 
   if (timerBar) {
-    timerBar.style.height = `${height}%`;
+    timerBar.style.width = `${width}%`;
   }
 }
