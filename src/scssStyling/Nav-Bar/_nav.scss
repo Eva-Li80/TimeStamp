@@ -2,7 +2,7 @@
 
 // Navigation styles
 nav {
-    background-color: white;
+    background-color: $color-gray-dark;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, .1);
 
     // Navigation list styles
@@ -40,4 +40,9 @@ nav {
     }
 }
 
+ul img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
 /* slut på Goran's kod */

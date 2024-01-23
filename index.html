@@ -4,66 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="src/scssStyling/main.scss" />
     <link rel="stylesheet" href="style.css">
     <title>Pink Pooper's</title>
+
 </head>
 <body>
   <!--Goran's kod NavBar-->
-    <nav>
-      <ul class="sidebar">
-        <li onclick="hideSidebar()">
-         <!--Eva-le's kod-->
-          <a href="#">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24"
-              viewBox="0 -960 960 960"
-              width="24"
-            >
-              <path
-                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-              ></path>
-            </svg>
-          </a>
-        </li>
-        <!--slut på Eva-le's kod-->
-        <li><a href="#MENY">MENY</a></li>
+  <header>
+  <nav>
+    <ul class="sidebar">
+        <li onclick=hideSidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <!-- <li><a href="#MENY">MENY</a></li> -->
         <li><a href="#ANALOG_TIMER">ANALOG TIMER</a></li>
         <li><a href="#DIGITAL_TIMER">DIGITAL TIMER</a></li>
         <li><a href="#VISUAL_TIMER">VISUAL TIMER</a></li>
         <li><a href="#TEXT_TIMER">TEXT TIMER</a></li>
         <li><a href="#CIRCLES_TIMER">CIRCLES TIMER</a></li>
-      </ul>
-      <ul>
-        <li class="hideOnMobile"><a href="#MENY">MENY</a></li>
+    </ul>
+    <ul>
+      <img src="./src/img/lgga-skol-proj.jpg" alt="">
         <li class="hideOnMobile"><a href="#ANALOG_TIMER">ANALOG TIMER</a></li>
         <li class="hideOnMobile"><a href="#DIGITAL_TIMER">DIGITAL TIMER</a></li>
         <li class="hideOnMobile"><a href="#VISUAL_TIMER">VISUAL TIMER</a></li>
         <li class="hideOnMobile"><a href="#TEXT_TIMER">TEXT TIMER</a></li>
         <li class="hideOnMobile"><a href="#CIRCLES_TIMER">CIRCLES TIMER</a></li>
-        <li class="menu-button" onclick="showSidebar()">
-          <!--Eva-le's kod-->
-          <a href="#">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24"
-              viewBox="0 -960 960 960"
-              width="24"
-            >
-              <path
-                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-              ></path>
-            </svg>
-          </a>
-          <!-- slit på Eva-le's kod-->
-        </li>
-      </ul>
-    </nav>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+</nav>
+</header>
 
     <!-- slut på Goran's kod-->
     <div id="app">
