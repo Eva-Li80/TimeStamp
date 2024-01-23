@@ -1,12 +1,13 @@
-.page-five {
-    background-color: $color-gray-dark;
-    @include justdirection(column);
+@media only screen and (max-width: 600px) {
+  .page-five {
     height: 100vh;
-  
-    .header-interval{
+    @include flexdirection(column);
+    background-color: black;
+
+    .header-interval {
+      margin-top: 40px;
       color: $color-white;
-      padding: 20px;
-      background-color: $color-gray-light;
+      padding-bottom: 20px;
       display: flex;
       align-items: center;
       .ic {
@@ -17,47 +18,100 @@
       .interval {
         flex: 1;
         text-align: center;
-        font-size: $base-size-large;
+        font-size: $base-size-medium;
         text-transform: uppercase;
         letter-spacing: 0.5px;
       }
     }
-  
-    .timer-bar-container {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  
-      
+
     #timer-bar {
+      margin-top: 100px;
       background: linear-gradient(
         to left,
-        $color-gray-dark,
+        $color-gray-darker,
         $color-gray-light,
         $color-pink-light,
         $color-gray-light,
-        $color-gray-dark
+        $color-gray-darker
       );
       box-shadow: 5px 5px 20px $color-gray-light;
       border-radius: 5px;
-      height: 300px;
-      width: 95%;
-      transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+      width: 250px;
+      transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out;
     }
-    }
-  
-  
+
     .btn-container {
+      align-self: center;
+      margin-top: auto; 
+      margin-bottom: 40px;
+      .abort-timer {
+        background-color: black;
+        color: white;
+        border: 2px solid white;
+        border-radius: 5px;
+        padding: 10px 30px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        font-size: $base-size-medium;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .page-five {
+    height: 100vh;
+    @include flexdirection(column);
+    background-color: black;
+
+    .header-interval {
+      margin-top: 20px;
       color: $color-white;
-      padding: 10px;
-      background-color: $color-gray-light;
+      padding-bottom: 20px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      .ic {
+        font-size: $base-size-large;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      .interval {
+        flex: 1;
+        text-align: center;
+        font-size: $base-size-xllarge;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    #timer-bar {
+     margin-top: 100px;
+      background: linear-gradient(
+        to left,
+        $color-gray-darker,
+        $color-gray-light,
+        $color-pink-light,
+        $color-gray-light,
+        $color-gray-darker
+      );
+      box-shadow: 5px 5px 20px $color-gray-light;
+      border-radius: 5px;
+      width: 350px;
+      transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    }
+
+    .btn-container {
+      align-self: center; 
+      margin-top: auto; 
+      margin-bottom: 40px;
       .abort-timer {
+        background-color: black;
+        color: white;
+        border: 2px solid white;
+        border-radius: 5px;
         padding: 10px 50px;
-        border-radius: 3px;
         font-weight: 700;
         letter-spacing: 0.5px;
         font-size: $base-size-medium;
@@ -66,6 +120,4 @@
       }
     }
   }
-  
-  
-  
+}
