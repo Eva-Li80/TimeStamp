@@ -1,21 +1,14 @@
 import { pauseTimerPage } from "./pausePage";
+import { getTimerBar } from "./timerBarPage";
+import { startTimer } from "./numberToTextPage";
+import Timer from "easytimer.js";
 
-type TimerConfig = {
-  duration: number;
-  isRunning: boolean;
-  LOCAL_STORAGE_KEY_SECONDS: string;
-  LOCAL_STORAGE_KEY_MINUTES: string;
-  LOCAL_STORAGE_ISRUNNING: string;
-};
-
-export function createTimer(): TimerConfig {
-  const LOCAL_STORAGE_KEY_SECONDS = "timerDurationSeconds";
-  const LOCAL_STORAGE_KEY_MINUTES = "timerDurationMinutes";
-  const LOCAL_STORAGE_ISRUNNING = "FALSE";
+export function createTimer() {
   let duration: number = 600;
   const defaultDuration: number = 600;
-  let isRunning: boolean = false;
-  let countdown: number | undefined;
+  let timer = new Timer();
+  let pause = new Timer();
+  let isRunning = timer.isRunning();
 
   const timeDisplay = document.getElementById("time-display") as HTMLElement;
   const decreaseBtn = document.getElementById("decrease-time") as HTMLElement;
@@ -34,15 +27,6 @@ export function createTimer(): TimerConfig {
     }
   }
 
-  // Save duration to local storage
-  function saveDuration(): void {
-    const minutes = Math.floor(duration / 60);
-    const seconds = duration % 60;
-
-    localStorage.setItem(LOCAL_STORAGE_KEY_SECONDS, seconds.toString());
-    localStorage.setItem(LOCAL_STORAGE_KEY_MINUTES, minutes.toString());
-  }
-
   if (timeDisplay) {
     updateTimeDisplay();
   }
@@ -53,7 +37,6 @@ export function createTimer(): TimerConfig {
       if (!isRunning && duration > 60) {
         duration -= 60;
         updateTimeDisplay();
-        saveDuration();
       }
     });
   }
@@ -64,7 +47,6 @@ export function createTimer(): TimerConfig {
       if (!isRunning && duration < 3600) {
         duration += 60;
         updateTimeDisplay();
-        saveDuration();
       }
     });
   }
@@ -72,27 +54,28 @@ export function createTimer(): TimerConfig {
   // Start timer
   if (startTimerBtn) {
     startTimerBtn.addEventListener("click", () => {
-      if (!isRunning) {
-        isRunning = true;
-        localStorage.setItem(LOCAL_STORAGE_ISRUNNING, "TRUE");
-        console.log("Started");
+      if (breakCheckbox.checked) {
+        timer.start({
+          countdown: true,
+          startValues: { minutes: Math.floor(duration / 60) },
+        });
+        //Starta klockorna här
+        getTimerBar(timer);
+        startTimer(timer);
 
-        countdown = setInterval(() => {
-          duration -= 1;
-          saveDuration();
-
-          if (duration <= 0 && breakCheckbox.checked) {
-            pauseTimerPage();
-            clearInterval(countdown);
-            isRunning = false;
-            console.log("Finished");
-          } else if (duration <= 0) {
-            clearInterval(countdown);
-            isRunning = false;
-            localStorage.setItem(LOCAL_STORAGE_ISRUNNING, "TRUE");
-            console.log("Finished");
-          }
-        }, 1000);
+        timer.addEventListener("targetAchieved", function (e) {
+          pauseTimerPage(pause);
+        });
+        pause.addEventListener("paused", function (e) {
+          //starta om timer?
+        });
+      } else {
+        timer.start({
+          countdown: true,
+          startValues: { minutes: Math.floor(duration / 60) },
+        });
+        getTimerBar(timer);
+        startTimer(timer);
       }
     });
   }
@@ -100,23 +83,7 @@ export function createTimer(): TimerConfig {
   // Abort timer
   if (abortTimerBtn) {
     abortTimerBtn.addEventListener("click", () => {
-      if (isRunning) {
-        if (countdown) clearInterval(countdown);
-        isRunning = false;
-        console.log("Aborted");
-
-        // Reset duration
-        duration = defaultDuration;
-        updateTimeDisplay();
-      }
+      timer.stop();
     });
   }
-
-  return {
-    duration,
-    isRunning,
-    LOCAL_STORAGE_KEY_MINUTES,
-    LOCAL_STORAGE_KEY_SECONDS,
-    LOCAL_STORAGE_ISRUNNING,
-  };
 }

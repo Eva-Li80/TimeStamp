@@ -1,17 +1,19 @@
 import { Timer } from "easytimer.js";
 import * as numberToWords from "number-to-words";
 
-export function startTimer(minutes: number, seconds: number): void {
-  const timer = new Timer();
+export function startTimer(timer: Timer): void {
   const dynamicMinutes = document.getElementById("minutes");
   const dynamicSeconds = document.getElementById("seconds");
-
+  const abortTimerBtn = document.getElementById("texttimer-abort");
+  if (abortTimerBtn) {
+    abortTimerBtn.addEventListener("click", () => {
+      timer.stop();
+    });
+  }
   timer.addEventListener("secondsUpdated", () => {
     const timeText = getTimeToText(timer);
     updateDynamicText(dynamicMinutes, dynamicSeconds, timeText);
   });
-
-  timer.start({ countdown: true, startValues: { minutes, seconds } });
 
   timer.addEventListener("targetAchieved", () => {
     console.log("Tiden är ute!");
@@ -47,7 +49,9 @@ function getTimeToText(time: Timer): string {
         : "";
     const secondsString =
       secondsToText !== "zero"
-        ? ` and ${secondsToText} second${secondsToText !== "one" ? "s" : ""} left`
+        ? ` and ${secondsToText} second${
+            secondsToText !== "one" ? "s" : ""
+          } left`
         : "";
 
     return `${minutesString}${secondsString}`;
@@ -65,5 +69,3 @@ function getMinutesToText(minutes: number): string {
 function getSecondsToText(seconds: number): string {
   return numberToWords.toWords(seconds);
 }
-
-

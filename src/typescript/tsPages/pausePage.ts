@@ -1,7 +1,6 @@
 import Timer from "easytimer.js";
 
-export function pauseTimerPage() {
-  let timer = new Timer();
+export function pauseTimerPage(timer: Timer) {
   timer.start({ countdown: true, startValues: { minutes: 5 } });
   const values = document.querySelector(".values");
   if (values) {
