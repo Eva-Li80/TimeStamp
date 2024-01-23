@@ -3,10 +3,11 @@ $color-white: #fff;
 $color-gray-light: #767575;
 $color-gray-medium: #4a4a4a;
 $color-gray-dark: #2a2a2a;
+$color-gray-darker: #171717;
 $color-black: #000;
 $color-green: rgb(43, 135, 138);
 $color-green-light: rgb(150, 175, 176);
-$color-pink-light: rgb(251, 212, 219);
+$color-pink-light: rgb(252, 228, 232);
 $color-pink: pink;
 
 //spacing
@@ -24,6 +25,7 @@ $base-font-size: 16px;
 $base-size-small: $base-font-size * 0.75;
 $base-size-medium: $base-font-size * 1.25;
 $base-size-large: $base-font-size * 1.75;
+$base-size-xllarge: $base-font-size * 2.25;
 $base-size-xlarge: $base-font-size * 4;
 
 //font weight
