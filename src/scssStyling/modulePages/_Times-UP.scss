@@ -1,5 +1,5 @@
 @media only screen and (max-width: 600px) {
-    .pause-page {
+    .TimesUP-page {
       height: 100vh;
       background: radial-gradient(
         circle at center,
@@ -44,7 +44,7 @@
   }
   
   @media only screen and (min-width: 601px) {
-    .pause-page {
+    .TimesUP-page {
       height: 100vh;
       background: radial-gradient(
         circle at center,
@@ -66,10 +66,12 @@
       }
   
       i {
-        color: $color-white;
+        color: $goran-main-color;
         font-size: 10em;
-        margin-top: 1.5em;
+        margin-top: 1em;
       }
+
+
   
       .values {
         font-size: $base-size-large;
