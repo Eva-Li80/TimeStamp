@@ -2,6 +2,7 @@ import { pauseTimerPage } from "./pausePage";
 import { getTimerBar } from "./timerBarPage";
 import { startTimer } from "./numberToTextPage";
 import Timer from "easytimer.js";
+import { CircleTimer } from "./circleTimer";
 import { digitalTimer } from "./digitalTimer";
 
 export function createTimer() {
@@ -14,7 +15,9 @@ export function createTimer() {
   const decreaseBtn = document.getElementById("decrease-time") as HTMLElement;
   const increaseBtn = document.getElementById("increase-time") as HTMLElement;
   const startTimerBtn = document.getElementById("start-timer") as HTMLElement;
-  const abortTimerBtn = document.querySelectorAll(".abort-timer") as NodeListOf<HTMLElement>;
+  const abortTimerBtn = document.querySelectorAll(
+    ".abort-timer"
+  ) as NodeListOf<HTMLElement>;
   const breakCheckbox = document.getElementById(
     "break-interval"
   ) as HTMLInputElement;
@@ -62,9 +65,8 @@ export function createTimer() {
         //Starta klockorna här
         getTimerBar(timer);
         startTimer(timer);
-        digitalTimer(timer)
-    
-
+        CircleTimer(timer);
+        digitalTimer(timer);
 
         timer.addEventListener("targetAchieved", function () {
           pauseTimerPage(pause);
@@ -79,15 +81,16 @@ export function createTimer() {
         });
         getTimerBar(timer);
         startTimer(timer);
+        CircleTimer(timer);
         digitalTimer(timer);
       }
     });
   }
 
-abortTimerBtn.forEach(function(abortTimerBtn) {
-  abortTimerBtn.addEventListener('click', function() {
-    timer.stop();      
-    console.log('Abort timer button clicked');
+  abortTimerBtn.forEach(function (abortTimerBtn) {
+    abortTimerBtn.addEventListener("click", function () {
+      timer.stop();
+      console.log("Abort timer button clicked");
+    });
   });
-});
 }
