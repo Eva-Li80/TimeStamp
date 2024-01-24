@@ -16,7 +16,7 @@ export function CircleTimer(timer: Timer) {
       text.innerHTML = timeValues.toString();
     }
 
-    circleelements.item(num).classList.toggle("blue");
+    circleelements.item(num).classList.toggle("orange");
     if (num <= 3) {
       num++;
     } else {

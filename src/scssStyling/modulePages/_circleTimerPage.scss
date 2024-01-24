@@ -14,9 +14,9 @@
     stroke: rgba(0, 0, 0, 0.4);
     stroke-width: 5px;
   }
-  .blue {
+  .orange {
     stroke-width: 8px;
-    stroke: rgba(55, 8, 185, 0.4);
+    stroke: rgb(207, 124, 0);
   }
   button {
     padding: 1rem 3rem;
@@ -33,6 +33,6 @@
 
   #circle-timer-text {
     color: rgba(0, 0, 0, 0.4);
-    font-size: small;
+    font-size: 2em;
   }
 }
