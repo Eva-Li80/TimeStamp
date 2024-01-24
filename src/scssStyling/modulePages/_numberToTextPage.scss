@@ -1,143 +1,96 @@
-@media only screen and (max-width: 600px) {
-  .page-six {
-    height: 100vh;
-    @include justdirection(column);
+.page-six {
+  height: 100vh;
+  @include justdirection(column);
 
-    .header-interval {
-      margin-top: 20px;
-      color: $color-white;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      .ic {
-        font-size: $base-size-large;
-        margin-right: 10px;
-        cursor: pointer;
-      }
-      .interval {
-        flex: 1;
-        text-align: center;
-        font-size: $base-size-medium;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
+  .header-interval {
+    margin-top: 20px;
+    color: $color-white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    .ic {
+      font-size: $base-size-large;
+      margin-right: 10px;
+      cursor: pointer;
     }
-    .timer-container {
+    .interval {
       flex: 1;
-      display: flex;
+      text-align: center;
+      font-size: $base-size-large;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  }
+  .timer-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      to left,
+      $color-black,
+      $color-gray-darker,
+      $color-gray-dark,
+      $color-gray-darker,
+      $color-black
+    );
+    .time-left {
+      max-height: 500px;
+      @include justdirection(column);
       align-items: center;
       justify-content: center;
-      background: linear-gradient(
-        to left,
-        $color-black,
-        $color-gray-darker,
-        $color-gray-dark,
-        $color-gray-darker,
-        $color-black
-      );
-      .time-left {
-        max-height: 500px;
-        @include justdirection(column);
-        align-items: center;
-        justify-content: center;
 
-        flex: 1;
+      flex: 1;
 
-        #minutes,
-        #seconds {
-          font-size: $base-size-large;
-          font-weight: bold;
-          margin: 20px;
-          color: $color-white;
-        }
+      #minutes,
+      #seconds {
+        font-size: $base-size-large;
+        font-weight: bold;
+        margin: 20px;
+        color: $color-white;
       }
     }
+  }
 
-    .btn-container {
-      margin-bottom: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      .abort-timer {
-        background-color: $color-gray-dark;
-        border: 2px solid $color-white;
-        color: $color-white;
-        padding: 10px 30px;
-        border-radius: 3px;
-        font-weight: 400;
-        letter-spacing: 0.5px;
-        font-size: $base-size-medium;
-        text-transform: uppercase;
-        cursor: pointer;
-      }
+  .btn-container {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .abort-timer {
+      background: none;
+      color: $color-white;
+      border: 1px solid $color-white;
+      padding: 10px;
+      margin: 1em;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+      text-transform: uppercase;
     }
   }
 }
 
 @media only screen and (min-width: 601px) {
   .page-six {
-    height: 100vh;
-    @include justdirection(column);
-
     .header-interval {
-      margin-top: 20px;
-      color: $color-white;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      .ic {
-        font-size: $base-size-large;
-        margin-right: 10px;
-        cursor: pointer;
-      }
       .interval {
         font-size: $base-size-xllarge;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
       }
     }
     .timer-container {
-     @include flexdirection(column);
-      background: linear-gradient(
-        to left,
-        $color-black,
-        $color-gray-darker,
-        $color-gray-dark,
-        $color-gray-darker,
-        $color-black
-      );
       .time-left {
-        max-height: 500px;
-        @include justdirection(column);
-        align-items: center;
-        justify-content: center;
-        flex: 1;
-        color: $color-white;
-
         #minutes,
         #seconds {
-          font-size: $base-size-xlarge;
-          font-weight: bold;
-          margin: 20px;
-          color: $color-white;
+          font-size: $base-size-xllarge;
         }
       }
     }
 
     .btn-container {
-      margin-bottom: 40px;
       padding: 10px;
       .abort-timer {
-        background-color: $color-gray-dark;
-        border: 2px solid $color-white;
-        border-radius: 3px;
-        color: $color-white;
-        padding: 10px 50px;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        font-size: $base-size-medium;
-        text-transform: uppercase;
-        cursor: pointer;
+        font-size: $base-size-large;
       }
     }
   }
