@@ -10,8 +10,6 @@ export function createTimer() {
   let timer = new Timer();
   let pause = new Timer();
   let isRunning = timer.isRunning();
-  let intervalTimer = new Timer();
-  console.log(intervalTimer.getTimeValues());
 
   const timeDisplay = document.getElementById("time-display") as HTMLElement;
   const decreaseBtn = document.getElementById("decrease-time") as HTMLElement;
@@ -90,9 +88,7 @@ export function createTimer() {
   abortTimerBtn.forEach(function (abortTimerBtn) {
     abortTimerBtn.addEventListener("click", function () {
       timer.stop();
-      if (intervalTimer.isRunning()) {
-        intervalTimer.stop();
-      }
+
       console.log("Abort timer button clicked");
     });
   });
@@ -109,16 +105,3 @@ function startTimers(timer: Timer, duration: number) {
   CircleTimer(timer);
   digitalTimer(timer);
 }
-/* 
-    if (intervalTimer.isRunning()) {
-          timer.addEventListener("targetAchieved", function () {
-            pauseTimerPage(pause);
-          });
-          pause.addEventListener("paused", function () {
-            startTimers(timer, duration);
-          });
-          pause.addEventListener("targetAchieved", () => {
-            startTimers(timer, duration);
-          });
-        }
-*/
