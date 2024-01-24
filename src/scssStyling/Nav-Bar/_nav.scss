@@ -1,5 +1,11 @@
 /* Goran's kod */
 
+//Navigation sticky
+.primary-header{
+    position: sticky;
+    top: 0;
+}
+
 // Navigation styles
 nav {
     background-color: $color-gray-dark;
