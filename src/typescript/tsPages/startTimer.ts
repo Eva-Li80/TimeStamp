@@ -10,6 +10,8 @@ export function createTimer() {
   let timer = new Timer();
   let pause = new Timer();
   let isRunning = timer.isRunning();
+  let intervalTimer = new Timer();
+  console.log(intervalTimer.getTimeValues());
 
   const timeDisplay = document.getElementById("time-display") as HTMLElement;
   const decreaseBtn = document.getElementById("decrease-time") as HTMLElement;
@@ -20,6 +22,9 @@ export function createTimer() {
   ) as NodeListOf<HTMLElement>;
   const breakCheckbox = document.getElementById(
     "break-interval"
+  ) as HTMLInputElement;
+  const intervalCheckbox = document.getElementById(
+    "interval"
   ) as HTMLInputElement;
 
   // Update time display
@@ -57,32 +62,27 @@ export function createTimer() {
   // Start timer
   if (startTimerBtn) {
     startTimerBtn.addEventListener("click", () => {
-      if (breakCheckbox.checked) {
-        timer.start({
-          countdown: true,
-          startValues: { minutes: Math.floor(duration / 60) },
-        });
-        //Starta klockorna här
-        getTimerBar(timer);
-        startTimer(timer);
-        CircleTimer(timer);
-        digitalTimer(timer);
-
+      if (breakCheckbox.checked && intervalCheckbox.checked) {
         timer.addEventListener("targetAchieved", function () {
           pauseTimerPage(pause);
         });
         pause.addEventListener("paused", function () {
-          //starta om timer?
+          startTimers(timer, duration);
+        });
+        pause.addEventListener("stopped", function () {
+          startTimers(timer, duration);
+        });
+        pause.addEventListener("targetAchieved", () => {
+          startTimers(timer, duration);
+        });
+        startTimers(timer, duration);
+      } else if (intervalCheckbox.checked) {
+        startTimers(timer, duration);
+        timer.addEventListener("targetAchieved", function () {
+          startTimers(timer, duration);
         });
       } else {
-        timer.start({
-          countdown: true,
-          startValues: { minutes: Math.floor(duration / 60) },
-        });
-        getTimerBar(timer);
-        startTimer(timer);
-        CircleTimer(timer);
-        digitalTimer(timer);
+        startTimers(timer, duration);
       }
     });
   }
@@ -90,7 +90,35 @@ export function createTimer() {
   abortTimerBtn.forEach(function (abortTimerBtn) {
     abortTimerBtn.addEventListener("click", function () {
       timer.stop();
+      if (intervalTimer.isRunning()) {
+        intervalTimer.stop();
+      }
       console.log("Abort timer button clicked");
     });
   });
 }
+
+function startTimers(timer: Timer, duration: number) {
+  timer.start({
+    countdown: true,
+    startValues: { minutes: Math.floor(duration / 60) },
+  });
+  //Starta klockorna här
+  getTimerBar(timer);
+  startTimer(timer);
+  CircleTimer(timer);
+  digitalTimer(timer);
+}
+/* 
+    if (intervalTimer.isRunning()) {
+          timer.addEventListener("targetAchieved", function () {
+            pauseTimerPage(pause);
+          });
+          pause.addEventListener("paused", function () {
+            startTimers(timer, duration);
+          });
+          pause.addEventListener("targetAchieved", () => {
+            startTimers(timer, duration);
+          });
+        }
+*/
