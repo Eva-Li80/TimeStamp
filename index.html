@@ -14,7 +14,7 @@
   <!--Goran's kod NavBar-->
   <header class="primary-header">
   <nav>
-    <ul class="sidebar">
+    <ul id="menu" class="sidebar">
         <li onclick=hideSidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
         <!-- <li><a href="#MENY">MENY</a></li> -->
         <li><a href="#ANALOG_TIMER">ANALOG TIMER</a></li>
@@ -45,7 +45,22 @@
         <p>For all your timing needs.</p>
       </div>
 
+      <script>
+        // Hämta referens till meny och ikon
+        const menu = document.getElementById("menu");
+        const menuIcon = document.querySelector(".bx-menu");
+      
+        // Funktion för att visa/dölja menyn
+        function toggleMenu() {
+          menu.style.display = (menu.style.display === "none" || menu.style.display === "") ? "flex" : "none";
+        }
+      
+        // Lägg till klickhändelse till ikonen
+        menuIcon.addEventListener("click", toggleMenu);
+      </script>
+
       <!-- TIMER START PAGE-->
+      <section class="start-timer1" id="start-timer1">
       <div class="timer-container">
         <div class="time-setter">
           <button id="decrease-time" class="time-adjust">Decrease</button>
@@ -63,12 +78,12 @@
         <button id="start-timer" class="start-button">START TIMER</button>
         <button id="stop-timer" class="abort-timer">STOP TIMER</button>
       </div>
-
+    </section>
       <!-- -------- -->
 
       <!-- Digital Timer -->
 
-      <section class="digitalTimer">
+      <section class="digitalTimer" id="DIGITAL_TIMER">
         <h1 class="digitalH1">Interval</h1>
         <div class="digital-clock">
           <div class="time">
@@ -91,6 +106,7 @@
       </div>
         
       <!-- SLIDER TIMER -->
+      <section class="VISUAL_TIMER" id="VISUAL_TIMER">
       <div class="page-five">
         <div class="header-interval">
           <i class="fa-solid fa-bars ic"></i>
@@ -105,29 +121,34 @@
           <button class="abort-timer">Abort Timer</button>
         </div>
       </div>
+    </section>
 
       <!-- TEXT TIMER -->
+      <section class="TEXT_TIMER" id="TEXT_TIMER">
       <div class="page-six">
-        <div class="header-interval">
-          <i class="fa-solid fa-bars ic"></i>
-          <div class="interval">interval</div>
-        </div>
+        
         <div class="timer-container">
+          <div class="header-interval">
+            <i class="fa-solid fa-bars ic"></i>
+            <div class="interval">interval</div>
+          </div>
           <div class="time-left">
             <div id="minutes"></div>
             <div id="seconds"></div>
           </div>
+          <div class="btn-container">
+            <button class="abort-timer">Abort Timer</button>
+          </div>
         </div>
-        <div class="btn-container">
-          <button class="abort-timer">Abort Timer</button>
-        </div>
+      
       </div>
     </div>
+  </section>
       <!--Goran's kod Alarm-->
   <div class="TimesUP-page">
     <i id="alarm" class='bx bx-alarm-exclamation bx-tada'></i>
     <h1>Times UP..!</h1>
-    <button id="newTime-btn">SET NEW TIMER</button>
+    <button id="newTime-btn" onclick="location.href='#start-timer1'">SET NEW TIMER</button>
 <!-- slut på Goran's kod Times-UP-->
 
     <!--Goran's kod-->
