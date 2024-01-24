@@ -4,76 +4,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="src/scssStyling/main.scss" />
     <link rel="stylesheet" href="style.css">
     <title>Pink Pooper's</title>
+
 </head>
 <body>
   <!--Goran's kod NavBar-->
-    <nav>
-      <ul class="sidebar">
-        <li onclick="hideSidebar()">
-         <!--Eva-le's kod-->
-          <a href="#">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24"
-              viewBox="0 -960 960 960"
-              width="24"
-            >
-              <path
-                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-              ></path>
-            </svg>
-          </a>
-        </li>
-        <!--slut på Eva-le's kod-->
-        <li><a href="#MENY">MENY</a></li>
+  <header class="primary-header">
+  <nav>
+    <ul id="menu" class="sidebar">
+        <li onclick=hideSidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <!-- <li><a href="#MENY">MENY</a></li> -->
         <li><a href="#ANALOG_TIMER">ANALOG TIMER</a></li>
         <li><a href="#DIGITAL_TIMER">DIGITAL TIMER</a></li>
         <li><a href="#VISUAL_TIMER">VISUAL TIMER</a></li>
         <li><a href="#TEXT_TIMER">TEXT TIMER</a></li>
         <li><a href="#CIRCLES_TIMER">CIRCLES TIMER</a></li>
-      </ul>
-      <ul>
-        <li class="hideOnMobile"><a href="#MENY">MENY</a></li>
+    </ul>
+    <ul>
+      <img src="./src/img/lgga-skol-proj.jpg" alt="">
         <li class="hideOnMobile"><a href="#ANALOG_TIMER">ANALOG TIMER</a></li>
         <li class="hideOnMobile"><a href="#DIGITAL_TIMER">DIGITAL TIMER</a></li>
         <li class="hideOnMobile"><a href="#VISUAL_TIMER">VISUAL TIMER</a></li>
         <li class="hideOnMobile"><a href="#TEXT_TIMER">TEXT TIMER</a></li>
         <li class="hideOnMobile"><a href="#CIRCLES_TIMER">CIRCLES TIMER</a></li>
-        <li class="menu-button" onclick="showSidebar()">
-          <!--Eva-le's kod-->
-          <a href="#">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24"
-              viewBox="0 -960 960 960"
-              width="24"
-            >
-              <path
-                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-              ></path>
-            </svg>
-          </a>
-          <!-- slit på Eva-le's kod-->
-        </li>
-      </ul>
-    </nav>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+</nav>
+</header>
 
     <!-- slut på Goran's kod-->
     <div id="app">
+
       <!--START-PAGE-->
       <div class="start-page">
         <i class="bx bx-menu bx-rotate-90"></i>
         <h1>INTERVAL</h1>
         <p>For all your timing needs.</p>
       </div>
+
+      <script>
+        // Hämta referens till meny och ikon
+        const menu = document.getElementById("menu");
+        const menuIcon = document.querySelector(".bx-menu");
+      
+        // Funktion för att visa/dölja menyn
+        function toggleMenu() {
+          menu.style.display = (menu.style.display === "none" || menu.style.display === "") ? "flex" : "none";
+        }
+      
+        // Lägg till klickhändelse till ikonen
+        menuIcon.addEventListener("click", toggleMenu);
+      </script>
+
       <!-- TIMER START PAGE-->
+      <section class="start-timer1" id="start-timer1">
       <div class="timer-container">
         <div class="time-setter">
           <button id="decrease-time" class="time-adjust">Decrease</button>
@@ -89,10 +76,25 @@
           <input type="checkbox" id="break-interval" />
         </div>
         <button id="start-timer" class="start-button">START TIMER</button>
-        <button id="stop-timer" class="stop-button">STOP TIMER</button>
+        <button id="stop-timer" class="abort-timer">STOP TIMER</button>
       </div>
-
+    </section>
       <!-- -------- -->
+
+      <!-- Digital Timer -->
+
+      <section class="digitalTimer" id="DIGITAL_TIMER">
+        <h1 class="digitalH1">Interval</h1>
+        <div class="digital-clock">
+          <div class="time">
+            <span id="digitalMinutes">00</span>
+            <span>:</span>
+            <span id="digitalSeconds">00</span>
+          </div>
+        </div>
+        <button class="abort-timer">Abort Timer</button>
+        </section>
+
       <!--PAUSE PAGE-->
       <div class="pause-page">
         <i class="bx bx-pause"></i>
@@ -102,23 +104,29 @@
         </div>
         <button id="pause-btn">NO PAUSE, GO NOW!</button>
       </div>
-      <!--Ny sida-->
+        
+      <!-- SLIDER TIMER -->
       <section class="VISUAL_TIMER" id="VISUAL_TIMER">
       <div class="page-five">
+        <div class="header-interval">
+          <i class="fa-solid fa-bars ic"></i>
+          <div class="interval">interval</div>
+        </div>
+
         <div class="timer-bar-container">
-          <div class="header-interval">
-            <i class="fa-solid fa-bars ic"></i>
-            <div class="interval">interval</div>
-          </div>
           <div id="timer-bar"></div>
         </div>
+
         <div class="btn-container">
-          <button id="timebar-abort" class="abort-timer">Abort Timer</button>
+          <button class="abort-timer">Abort Timer</button>
         </div>
       </div>
     </section>
-    <section class="TEXT_TIMER" id="TEXT_TIMER">
+
+      <!-- TEXT TIMER -->
+      <section class="TEXT_TIMER" id="TEXT_TIMER">
       <div class="page-six">
+        
         <div class="timer-container">
           <div class="header-interval">
             <i class="fa-solid fa-bars ic"></i>
@@ -129,7 +137,7 @@
             <div id="seconds"></div>
           </div>
           <div class="btn-container">
-            <button id="texttimer-abort" class="abort-timer">Abort Timer</button>
+            <button class="abort-timer">Abort Timer</button>
           </div>
         </div>
       </section>
@@ -145,19 +153,18 @@
           <button id="abort-timer-circle">Abort Timer</button>
         </div>
       </section>
+      
       </div>
     </div>
-  </div>
-  <script type="module" src="./src/typescript/main.ts"></script>
-  <!--Goran's kod Alarm-->
+  </section>
+      <!--Goran's kod Alarm-->
   <div class="TimesUP-page">
     <i id="alarm" class='bx bx-alarm-exclamation bx-tada'></i>
     <h1>Times UP..!</h1>
-    <button id="newTime-btn">SET NEW TIMER</button>
+    <button id="newTime-btn" onclick="location.href='#start-timer1'">SET NEW TIMER</button>
 <!-- slut på Goran's kod Times-UP-->
 
-
-    <!--Goran's kod funktion för NavBar-->
+    <!--Goran's kod-->
     <script>
       function showSidebar() {
         const sidebar = document.querySelector(".sidebar");

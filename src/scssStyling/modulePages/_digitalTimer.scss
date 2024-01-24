@@ -1,0 +1,35 @@
+.digitalTimer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: white;
+    gap: 16rem;
+
+    .digitalH1 {
+        font-size: 2rem;
+        color: $color-gray-dark;
+        position: relative;
+    }
+    span {
+        font-size: 8rem;
+        color: $color-gray-dark;
+        position: relative;
+
+    }
+    button {
+        padding: 1rem 3rem;
+        border-radius: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.2rem;
+        font-size: $base-size-medium;
+        position: relative;
+        background-color: transparent;
+        border: 2px solid $color-gray-dark;
+        text-transform: uppercase;
+        cursor: pointer;
+
+
+    }
+}

@@ -3,10 +3,10 @@ import { getTimerBar } from "./timerBarPage";
 import { startTimer } from "./numberToTextPage";
 import Timer from "easytimer.js";
 import { CircleTimer } from "./circleTimer";
+import { digitalTimer } from "./digitalTimer";
 
 export function createTimer() {
   let duration: number = 600;
-  const defaultDuration: number = 600;
   let timer = new Timer();
   let pause = new Timer();
   let isRunning = timer.isRunning();
@@ -15,7 +15,9 @@ export function createTimer() {
   const decreaseBtn = document.getElementById("decrease-time") as HTMLElement;
   const increaseBtn = document.getElementById("increase-time") as HTMLElement;
   const startTimerBtn = document.getElementById("start-timer") as HTMLElement;
-  const abortTimerBtn = document.getElementById("stop-timer") as HTMLElement;
+  const abortTimerBtn = document.querySelectorAll(
+    ".abort-timer"
+  ) as NodeListOf<HTMLElement>;
   const breakCheckbox = document.getElementById(
     "break-interval"
   ) as HTMLInputElement;
@@ -64,11 +66,12 @@ export function createTimer() {
         getTimerBar(timer);
         startTimer(timer);
         CircleTimer(timer);
+        digitalTimer(timer);
 
-        timer.addEventListener("targetAchieved", function (e) {
+        timer.addEventListener("targetAchieved", function () {
           pauseTimerPage(pause);
         });
-        pause.addEventListener("paused", function (e) {
+        pause.addEventListener("paused", function () {
           //starta om timer?
         });
       } else {
@@ -79,14 +82,15 @@ export function createTimer() {
         getTimerBar(timer);
         startTimer(timer);
         CircleTimer(timer);
+        digitalTimer(timer);
       }
     });
   }
 
-  // Abort timer
-  if (abortTimerBtn) {
-    abortTimerBtn.addEventListener("click", () => {
+  abortTimerBtn.forEach(function (abortTimerBtn) {
+    abortTimerBtn.addEventListener("click", function () {
       timer.stop();
+      console.log("Abort timer button clicked");
     });
-  }
+  });
 }
