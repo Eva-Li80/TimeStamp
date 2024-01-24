@@ -1,6 +1,6 @@
 .timer-container {
   height: 100vh;
-  background-color: $color-pink;
+  background-color: $color-gray-dark;
   @include flexdirection(column);
 
   .time-setter {
@@ -10,6 +10,9 @@
     #time-display {
       margin: 20px;
       font-size: $base-size-large;
+      color: whitesmoke;
+      padding: 5px;
+      border-radius: 5px;
     }
     #time-display {
       font-size: $base-size-xlarge;
@@ -35,6 +38,7 @@
 
       input[type="checkbox"] {
         margin: 5px;
+      
       }
       .intervals {
         font-size: $base-size-medium;
@@ -46,7 +50,7 @@
   .stop-button {
     padding: 10px 50px;
     margin-top: 20px;
-    border-radius: 3px;
+    border-radius: 5px;
     font-weight: 700;
     letter-spacing: 0.5px;
     font-size: $base-size-medium;

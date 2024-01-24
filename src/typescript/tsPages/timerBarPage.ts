@@ -40,11 +40,11 @@ function updateTimerBar(
     const totalSeconds = currentMinutes * 60 + currentSeconds;
     const goneSeconds = minutes * 60 + seconds - totalSeconds;
 
-    const height: number = Math.max(0, (goneSeconds / (minutes * 60 + seconds)) * 350);
+    const height: number = Math.max(0, (goneSeconds / (minutes * 60 + seconds)) * 450);
 
     const timerBar = document.getElementById("timer-bar") as HTMLElement;
   
     if (timerBar) {
-        timerBar.style.height = `${350 - height}%`;
+        timerBar.style.height = `${450 - height}%`;
     }
 }
