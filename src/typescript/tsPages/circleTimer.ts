@@ -1,24 +1,26 @@
 import Timer from "easytimer.js";
 
 export function CircleTimer(timer: Timer) {
-  const circle = document.getElementById(
-    "circle2"
-  ) as unknown as SVGCircleElement;
-  const button = document.getElementById("button") as HTMLElement;
+  const circlesvg = document.getElementById(
+    "circle-svg"
+  ) as unknown as SVGAElement;
+  const circleelements = circlesvg.querySelectorAll("circle");
+  const text = document.getElementById("circle-timer-text");
 
-  const length = circle.getTotalLength();
-  console.log(length);
+  console.log(circleelements);
+  let num = 0;
 
-  circle.style.strokeDasharray = length.toString();
-  circle.style.strokeDashoffset = length.toString();
+  timer.addEventListener("secondsUpdated", (e) => {
+    const timeValues = timer.getTimeValues();
+    if (text) {
+      text.innerHTML = timeValues.toString();
+    }
 
-  let count = timer.getTimeValues().minutes;
-
-  timer.addEventListener("minutesUpdated", (e) => {
-    console.log((length - length / count).toString());
-    const times = length / count;
-    circle.style.strokeDashoffset = (length - times).toString();
-
-    count -= 1;
+    circleelements.item(num).classList.toggle("blue");
+    if (num <= 3) {
+      num++;
+    } else {
+      num = 0;
+    }
   });
 }

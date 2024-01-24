@@ -1,21 +1,38 @@
 .page-7 {
   height: 100vh;
+  @include flexdirection(column);
+  margin: 2em;
   svg {
     display: inline-block;
-    vertical-align: middle;
   }
   circle {
-    stroke-width: 5px;
     fill: transparent;
     stroke-linecap: round;
   }
 
-  #circle1 {
+  .grey {
     stroke: rgba(0, 0, 0, 0.4);
+    stroke-width: 5px;
+  }
+  .blue {
+    stroke-width: 8px;
+    stroke: rgba(55, 8, 185, 0.4);
+  }
+  button {
+    padding: 1rem 3rem;
+    border-radius: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    font-size: $base-size-medium;
+    position: relative;
+    background-color: transparent;
+    border: 2px solid $color-gray-dark;
+    text-transform: uppercase;
+    cursor: pointer;
   }
 
-  #circle2 {
-    stroke: #bbe1fa;
-    transition: 1s linear;
+  #circle-timer-text {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: small;
   }
 }
