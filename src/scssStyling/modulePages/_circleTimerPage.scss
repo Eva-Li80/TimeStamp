@@ -1,38 +1,91 @@
-.page-7 {
-  height: 100vh;
-  @include flexdirection(column);
-  margin: 2em;
-  svg {
-    display: inline-block;
-  }
-  circle {
-    fill: transparent;
-    stroke-linecap: round;
-  }
+@media screen and (max-width: 600px) {
+  .page-7 {
+    height: 100vh;
+    @include flexdirection(column);
+    margin: 2em;
+    .circle-mobile {
+      svg {
+        display: inline-block;
+      }
+      circle {
+        fill: transparent;
+        stroke-linecap: round;
+      }
+    }
 
-  .grey {
-    stroke: rgba(0, 0, 0, 0.4);
-    stroke-width: 5px;
-  }
-  .orange {
-    stroke-width: 8px;
-    stroke: rgb(207, 124, 0);
-  }
-  button {
-    padding: 1rem 3rem;
-    border-radius: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.2rem;
-    font-size: $base-size-medium;
-    position: relative;
-    background-color: transparent;
-    border: 2px solid $color-gray-dark;
-    text-transform: uppercase;
-    cursor: pointer;
-  }
+    .grey {
+      stroke: rgba(0, 0, 0, 0.4);
+      stroke-width: 5px;
+    }
+    .orange {
+      stroke-width: 8px;
+      stroke: rgb(207, 124, 0);
+    }
+    button {
+      padding: 1rem 3rem;
+      border-radius: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2rem;
+      font-size: $base-size-medium;
+      position: relative;
+      background-color: transparent;
+      border: 2px solid $color-gray-dark;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
 
-  #circle-timer-text {
-    color: rgba(0, 0, 0, 0.4);
-    font-size: 2em;
+    #circle-timer-text {
+      color: rgba(0, 0, 0, 0.4);
+      font-size: 2em;
+    }
+    .circle {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .page-7 {
+    height: 100vh;
+    @include flexdirection(column);
+    margin: 2em;
+    .circle {
+      svg {
+        display: inline-block;
+      }
+      circle {
+        fill: transparent;
+        stroke-linecap: round;
+      }
+    }
+
+    .grey {
+      stroke: rgba(0, 0, 0, 0.4);
+      stroke-width: 5px;
+    }
+    .orange {
+      stroke-width: 8px;
+      stroke: rgb(207, 124, 0);
+    }
+    button {
+      padding: 1rem 3rem;
+      border-radius: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2rem;
+      font-size: $base-size-medium;
+      position: relative;
+      background-color: transparent;
+      border: 2px solid $color-gray-dark;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    #circle-timer-text {
+      color: rgba(0, 0, 0, 0.4);
+      font-size: 2em;
+    }
+    .circle-mobile {
+      display: none;
+    }
   }
 }
