@@ -1,59 +1,119 @@
-.timer-container {
-  height: 100vh;
-  background-color: $color-gray-dark;
-  @include flexdirection(column);
+@media only screen and (max-width: 600px) {
+  .timer-container {
+    height: 100vh;
+    background-color: $color-gray-dark;
+    @include flexdirection(column);
 
-  .time-setter {
-    @include flexdirection(row);
-    margin-top: 20px;
-    button,
-    #time-display {
-      margin: 20px;
-      font-size: $base-size-large;
-      color: whitesmoke;
-      padding: 5px;
+    .time-setter {
+      @include flexdirection(row);
+      margin-top: 20px;
+      button,
+      #time-display {
+        margin: 5px;
+        font-size: $base-size-medium;
+        color: whitesmoke;
+        padding: 3px;
+        border-radius: 5px;
+      }
+      button {
+        color: $color-gray-medium;
+        margin: 5px;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+    }
+
+    .options {
+      @include justdirection(column);
+      margin-top: 80px;
+      margin-left: -20px;
+
+      label {
+        @include justdirection(row);
+        width: 100%;
+        margin-bottom: 20px;
+
+        input[type="checkbox"] {
+          margin: 5px;
+        }
+        .intervals {
+          font-size: $base-size-medium;
+          margin-top: 10px;
+        }
+      }
+    }
+    #start-timer,
+    #stop-timer {
+      max-width: 150px;
+      padding: 5px 20px;
+      margin-top: 20px;
       border-radius: 5px;
-    }
-    #time-display {
-      font-size: $base-size-xlarge;
-    }
-    button {
-      color: $color-gray-medium;
-      margin: 40px;
-    }
-    button:hover {
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      font-size: $base-size-medium;
       cursor: pointer;
     }
   }
+}
 
-  .options {
-    @include justdirection(column);
-    margin-top: 80px;
-    margin-left: -20px;
+@media only screen and (min-width: 601px) {
+  .timer-container {
+    height: 100vh;
+    background-color: $color-gray-dark;
+    @include flexdirection(column);
 
-    label {
-      @include justdirection(row);
-      width: 100%;
-      margin-bottom: 20px;
-
-      input[type="checkbox"] {
-        margin: 5px;
-      
+    .time-setter {
+      @include flexdirection(row);
+      margin-top: 20px;
+      button,
+      #time-display {
+        margin: 20px;
+        font-size: $base-size-large;
+        color: whitesmoke;
+        padding: 5px;
+        border-radius: 5px;
       }
-      .intervals {
-        font-size: $base-size-medium;
-        margin-top: 10px;
+      #time-display {
+        font-size: $base-size-xlarge;
+      }
+      button {
+        color: $color-gray-medium;
+        margin: 40px;
+      }
+      button:hover {
+        cursor: pointer;
       }
     }
-  }
-  .start-button,
-  .stop-button {
-    padding: 10px 50px;
-    margin-top: 20px;
-    border-radius: 5px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    font-size: $base-size-medium;
-    cursor: pointer;
+
+    .options {
+      @include justdirection(column);
+      margin-top: 80px;
+      margin-left: -20px;
+
+      label {
+        @include justdirection(row);
+        width: 100%;
+        margin-bottom: 20px;
+
+        input[type="checkbox"] {
+          margin: 5px;
+        }
+        .intervals {
+          font-size: $base-size-medium;
+          margin-top: 10px;
+        }
+      }
+    }
+    .start-button,
+    .stop-button {
+      padding: 10px 50px;
+      margin-top: 20px;
+      border-radius: 5px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      font-size: $base-size-medium;
+      cursor: pointer;
+    }
   }
 }
