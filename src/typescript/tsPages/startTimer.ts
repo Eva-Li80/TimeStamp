@@ -105,6 +105,6 @@ function startTimers(timer: Timer, duration: number) {
   startTimer(timer);
   CircleTimer(timer);
   digitalTimer(timer);
-  // Vet ej varför denna inte vill fungera för mig, men tar jag bort den så fungerar inte min klocka alls...
+  // Vet ej varför denna inte vill fungera för mig, men tar jag bort den så fungerar inte min klocka alls..
   AnalogTimer(timer);
 }
