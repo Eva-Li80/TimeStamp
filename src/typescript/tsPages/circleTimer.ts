@@ -13,7 +13,7 @@ export function CircleTimer(timer: Timer) {
   const text = document.getElementById("circle-timer-text");
 
   let numMobile = 4;
-  timer.addEventListener("secondsUpdated", (e) => {
+  timer.addEventListener("secondsUpdated", () => {
     circleelementsMobile.item(numMobile).classList.toggle("orange");
     if (numMobile <= 4 && numMobile >= 1) {
       numMobile--;
@@ -23,7 +23,7 @@ export function CircleTimer(timer: Timer) {
   });
 
   let num = 8;
-  timer.addEventListener("secondsUpdated", (e) => {
+  timer.addEventListener("secondsUpdated", () => {
     const timeValues = timer.getTimeValues();
     if (text) {
       text.innerHTML = timeValues.toString();
@@ -36,7 +36,7 @@ export function CircleTimer(timer: Timer) {
     }
   });
 
-  timer.addEventListener("targetAchieved", (e) => {
+  timer.addEventListener("targetAchieved", () => {
     if (text) {
       text.innerHTML = "00.00";
     }
@@ -45,7 +45,7 @@ export function CircleTimer(timer: Timer) {
     });
   });
 
-  timer.addEventListener("stopped", (e) => {
+  timer.addEventListener("stopped", () => {
     if (text) {
       text.innerHTML = "00.00";
     }

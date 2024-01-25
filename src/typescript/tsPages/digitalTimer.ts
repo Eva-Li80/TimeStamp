@@ -15,12 +15,12 @@ export function digitalTimer(timer: Timer): void {
     secondsElement.textContent = timeValues.seconds.toString();
   });
 
-  timer.addEventListener("targetAchieved", (e) => {
+  timer.addEventListener("targetAchieved", () => {
     minutesElement.textContent = "00";
     secondsElement.textContent = "00";
   });
 
-  timer.addEventListener("stopped", (e) => {
+  timer.addEventListener("stopped", () => {
     minutesElement.textContent = "00";
     secondsElement.textContent = "00";
   });
