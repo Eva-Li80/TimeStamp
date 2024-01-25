@@ -36,17 +36,7 @@
     align-self: center;
     margin-top: auto;
     margin-bottom: 80px;
-    .abort-timer {
-      background: none;
-      color: $color-white;
-      border: 1px solid $color-white;
-      padding: 10px;
-      margin: 1em;
-      font: inherit;
-      cursor: pointer;
-      outline: inherit;
-      text-transform: uppercase;
-    }
+    @include button($color-white);
   }
 }
 
