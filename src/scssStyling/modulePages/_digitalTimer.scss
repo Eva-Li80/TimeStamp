@@ -1,35 +1,44 @@
 .digitalTimer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    background-color: white;
-    gap: 16rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: white;
+  gap: 9rem;
 
+  .digitalH1 {
+    font-size: $base-size-xllarge;
+    color: $color-gray-dark;
+    position: relative;
+  }
+  span {
+    font-size: $base-size-xlarge;
+    color: $color-gray-dark;
+    position: relative;
+  }
+  .abort-timer {
+    background: none;
+    color: $color-gray-darker;
+    border: 1px solid $color-black;
+    padding: 10px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .digitalTimer {
     .digitalH1 {
-        font-size: 2rem;
-        color: $color-gray-dark;
-        position: relative;
+      font-size: $base-size-xlarge;
     }
     span {
-        font-size: 8rem;
-        color: $color-gray-dark;
-        position: relative;
-
+      font-size: $base-size-xlarge;
     }
-    button {
-        padding: 1rem 3rem;
-        border-radius: 0.7rem;
-        font-weight: 700;
-        letter-spacing: 0.2rem;
-        font-size: $base-size-medium;
-        position: relative;
-        background-color: transparent;
-        border: 2px solid $color-gray-dark;
-        text-transform: uppercase;
-        cursor: pointer;
-
-
+    .abort-timer {
+      font-size: $base-size-large;
     }
+  }
 }

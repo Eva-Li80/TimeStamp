@@ -3,22 +3,16 @@
   @include justdirection(column);
 
   .header-interval {
-    margin-top: 20px;
+    margin-top: 60px;
     color: $color-white;
     padding: 20px;
     display: flex;
     align-items: center;
-    .ic {
-      font-size: $base-size-large;
-      margin-right: 10px;
-      cursor: pointer;
-    }
     .interval {
       flex: 1;
       text-align: center;
-      font-size: $base-size-large;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      font-size: $base-size-xllarge;
+     
     }
   }
   .timer-container {
@@ -75,7 +69,7 @@
   .page-six {
     .header-interval {
       .interval {
-        font-size: $base-size-xllarge;
+        font-size: $base-size-xlarge;
       }
     }
     .timer-container {
