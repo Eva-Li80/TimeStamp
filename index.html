@@ -22,6 +22,7 @@
         <li><a href="#VISUAL_TIMER">VISUAL TIMER</a></li>
         <li><a href="#TEXT_TIMER">TEXT TIMER</a></li>
         <li><a href="#CIRCLES_TIMER">CIRCLES TIMER</a></li>
+        <li><a href="#start-timer1">SET COUNTDOWN</a></li>
     </ul>
     <ul>
       <img src="./src/img/lgga-skol-proj.jpg" alt="">
@@ -30,7 +31,8 @@
         <li class="hideOnMobile"><a href="#VISUAL_TIMER">VISUAL TIMER</a></li>
         <li class="hideOnMobile"><a href="#TEXT_TIMER">TEXT TIMER</a></li>
         <li class="hideOnMobile"><a href="#CIRCLES_TIMER">CIRCLES TIMER</a></li>
-        <li id="menu-open-icon" class="menu-button" ><a><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        <li class="hideOnMobile"><a href="#start-timer1">SET COUNTDOWN</a></li>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
     </ul>
 </nav>
 </header>
@@ -79,7 +81,7 @@
             <span id="digitalSeconds">00</span>
           </div>
         </div>
-        <button class="abort-timer">Abort Timer</button>
+        <button class="abort-timer" onclick="location.href='#start-timer1'">Abort Timer</button>
         </section>
 
       <!--PAUSE PAGE-->
@@ -89,7 +91,7 @@
         <div class="countdown">
           <div class="values"></div>
         </div>
-        <button id="pause-btn">NO PAUSE, GO NOW!</button>
+        <button id="pause-btn" onclick="location.href='#start-timer1'">NO PAUSE, GO NOW!</button>
       </div>
         
       <!-- SLIDER TIMER -->
@@ -105,7 +107,7 @@
         </div>
 
         <div class="btn-container">
-          <button class="abort-timer">Abort Timer</button>
+          <button class="abort-timer" onclick="location.href='#start-timer1'">Abort Timer</button>
         </div>
       </div>
     </section>
@@ -124,12 +126,12 @@
             <div id="seconds"></div>
           </div>
           <div class="btn-container">
-            <button class="abort-timer">Abort Timer</button>
+            <button class="abort-timer" onclick="location.href='#start-timer1'">Abort Timer</button>
           </div>
         </div>
       </section>
       <!-- CIRCLE TIMER -->
-      <section id="#CIRCLES_TIMER">
+      <section class="CIRCLES_TIMER" id="CIRCLES_TIMER">
         <div class="page-7">
           <!-- Desktop -->
           <div class="circle">
@@ -159,12 +161,12 @@
           </div>
           <p id="circle-timer-text"></p>
           
-          <button class="abort-timer">Abort Timer</button>
+          <button class="abort-timer" onclick="location.href='#TimesUP-page'">Abort Timer</button>
         </div>
       </section>
       
       <!--Goran's kod Alarm-->
-  <div class="TimesUP-page">
+  <div class="TimesUP-page" id="TimesUP-page">
     <i id="alarm" class='bx bx-alarm-exclamation bx-tada'></i>
     <h1>Times UP..!</h1>
     <button id="newTime-btn" onclick="location.href='#start-timer1'">SET NEW TIMER</button>
