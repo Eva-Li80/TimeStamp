@@ -3,7 +3,7 @@
     height: 100vh;
     @include flexdirection(column);
     background-color: white;
-    margin: 2em;
+
     .circle-mobile {
       svg {
         display: inline-block;
