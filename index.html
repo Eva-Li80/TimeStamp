@@ -94,7 +94,7 @@
             <span id="digitalSeconds">00</span>
           </div>
         </div>
-        <button class="abort-timer">Abort Timer</button>
+        <button class="abort-timer" onclick="location.href='#start-timer1'">Abort Timer</button>
         </section>
 
       <!--PAUSE PAGE-->
@@ -104,7 +104,7 @@
         <div class="countdown">
           <div class="values"></div>
         </div>
-        <button id="pause-btn">NO PAUSE, GO NOW!</button>
+        <button id="pause-btn" onclick="location.href='#start-timer1'">NO PAUSE, GO NOW!</button>
       </div>
         
       <!-- SLIDER TIMER -->
@@ -120,7 +120,7 @@
         </div>
 
         <div class="btn-container">
-          <button class="abort-timer">Abort Timer</button>
+          <button class="abort-timer" onclick="location.href='#start-timer1'">Abort Timer</button>
         </div>
       </div>
     </section>
@@ -139,7 +139,7 @@
             <div id="seconds"></div>
           </div>
           <div class="btn-container">
-            <button class="abort-timer">Abort Timer</button>
+            <button class="abort-timer" onclick="location.href='#start-timer1'">Abort Timer</button>
           </div>
         </div>
       </section>
@@ -174,12 +174,12 @@
           </div>
           <p id="circle-timer-text"></p>
           
-          <button class="abort-timer">Abort Timer</button>
+          <button class="abort-timer" onclick="location.href='#TimesUP-page'">Abort Timer</button>
         </div>
       </section>
       
       <!--Goran's kod Alarm-->
-  <div class="TimesUP-page">
+  <div class="TimesUP-page" id="TimesUP-page">
     <i id="alarm" class='bx bx-alarm-exclamation bx-tada'></i>
     <h1>Times UP..!</h1>
     <button id="newTime-btn" onclick="location.href='#start-timer1'">SET NEW TIMER</button>
