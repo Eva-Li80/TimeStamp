@@ -1,6 +1,8 @@
 export function NavBar() {
   const menu = document.getElementById("menu") as HTMLElement;
-  const menuIcon = document.querySelector(".bx-menu") as HTMLElement;
+  const menuIcon = document.getElementById(
+    "menu-icon-startPage"
+  ) as HTMLElement;
   const menyOpenIcon = document.getElementById("menu-open-icon") as HTMLElement;
   const menyCloseIcon = document.getElementById(
     "menu-close-icon"

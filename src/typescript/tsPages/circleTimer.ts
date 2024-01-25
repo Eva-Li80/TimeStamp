@@ -22,17 +22,17 @@ export function CircleTimer(timer: Timer) {
     }
   });
 
-  let num = 9;
+  let num = 8;
   timer.addEventListener("secondsUpdated", (e) => {
     const timeValues = timer.getTimeValues();
     if (text) {
       text.innerHTML = timeValues.toString();
     }
     circleelements.item(num).classList.toggle("orange");
-    if (num <= 9 && num >= 1) {
+    if (num <= 8 && num >= 1) {
       num--;
     } else {
-      num = 9;
+      num = 8;
     }
   });
 
