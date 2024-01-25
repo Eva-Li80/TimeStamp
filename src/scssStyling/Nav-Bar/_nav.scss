@@ -27,7 +27,7 @@ nav {
       // Navigation link styles
       a {
         height: 100%;
-        // padding: 0 30px;
+        padding: 0 10px;
         text-decoration: none;
         display: flex;
         align-items: center;
@@ -35,13 +35,10 @@ nav {
         color: rgb(221, 111, 8);
         font-size: 20px;
         
-        i {
-          color: $goran-main-color;
-        }
         &:hover {
           background-color: #f0f0f063;
         }
-      }
+      }      
 
       &:first-child {
         margin-right: auto;
