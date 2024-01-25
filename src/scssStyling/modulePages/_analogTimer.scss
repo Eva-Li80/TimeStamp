@@ -63,22 +63,12 @@
   flex-direction: column;
   height: 100vh;
   background-color: $color-white;
-  gap: 16rem;
+  gap: 10rem;
 
   .analogH1 {
     font-size: 2rem;
     color: $color-gray-dark;
-    position: relative;
   }
 
-  .abort-timer {
-    background: none;
-    color: $color-gray-darker;
-    border: 1px solid $color-black;
-    padding: 10px;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-    text-transform: uppercase;
-  }
+  @include button($color-gray-darker);
 }

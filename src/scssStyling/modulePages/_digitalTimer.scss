@@ -17,16 +17,7 @@
     color: $color-gray-dark;
     position: relative;
   }
-  .abort-timer {
-    background: none;
-    color: $color-gray-darker;
-    border: 1px solid $color-black;
-    padding: 10px;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-    text-transform: uppercase;
-  }
+  @include button($color-gray-darker);
 }
 
 @media only screen and (min-width: 601px) {

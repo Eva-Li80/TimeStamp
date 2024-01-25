@@ -6,7 +6,19 @@
 }
 
 @mixin justdirection($direction) {
-    display: flex;
-    flex-direction: $direction;
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin button($color) {
+  .abort-timer {
+    background: none;
+    color: $color;
+    border: 1px solid $color;
+    padding: 10px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    text-transform: uppercase;
   }
-  
+}

@@ -36,4 +36,14 @@ export const analogTimer = (timer: Timer): void => {
       minuteMarker.style.transform = `rotate(${minutesDegree}deg)`;
     }
   });
+
+  timer.addEventListener("targetAchieved", () => {
+    secondMarker.style.transform = `rotate(${90}deg)`;
+    minuteMarker.style.transform = `rotate(${90}deg)`;
+  });
+
+  timer.addEventListener("stopped", () => {
+    secondMarker.style.transform = `rotate(${90}deg)`;
+    minuteMarker.style.transform = `rotate(${90}deg)`;
+  });
 };

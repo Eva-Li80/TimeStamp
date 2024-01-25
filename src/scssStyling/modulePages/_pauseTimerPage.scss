@@ -16,10 +16,6 @@
       font-size: $base-size-medium;
     }
 
-    button {
-      font-size: $base-size-medium;
-    }
-
     i {
       color: $color-white;
       font-size: 5em;
@@ -32,13 +28,13 @@
 
     button {
       background: none;
-      color: inherit;
+      color: $color-white;
       border: 1px solid $color-white;
-      padding: 5px;
-      margin: 1em;
+      padding: 10px;
       font: inherit;
       cursor: pointer;
       outline: inherit;
+      text-transform: uppercase;
     }
   }
 }
@@ -61,10 +57,6 @@
       font-size: $base-size-xlarge;
     }
 
-    button {
-      font-size: $base-size-medium;
-    }
-
     i {
       color: $color-white;
       font-size: 10em;
@@ -77,13 +69,13 @@
 
     button {
       background: none;
-      color: inherit;
+      color: $color-white;
       border: 1px solid $color-white;
-      padding: 5px;
-      margin: 1em;
+      padding: 10px;
       font: inherit;
       cursor: pointer;
       outline: inherit;
+      text-transform: uppercase;
     }
   }
 }
