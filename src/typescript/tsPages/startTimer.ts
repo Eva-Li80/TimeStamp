@@ -60,17 +60,25 @@ export function createTimer() {
   // Start timer
   if (startTimerBtn) {
     startTimerBtn.addEventListener("click", () => {
-      if (breakCheckbox.checked && intervalCheckbox.checked) {
+      window.location.href = "#DIGITAL_TIMER";
+      if (
+        (breakCheckbox.checked && intervalCheckbox.checked) ||
+        breakCheckbox.checked
+      ) {
         timer.addEventListener("targetAchieved", function () {
           pauseTimerPage(pause);
+          window.location.href = "#PAUSE-PAGE";
         });
         pause.addEventListener("paused", function () {
+          window.location.href = "#DIGITAL_TIMER";
           startTimers(timer, duration);
         });
         pause.addEventListener("stopped", function () {
+          window.location.href = "#DIGITAL_TIMER";
           startTimers(timer, duration);
         });
         pause.addEventListener("targetAchieved", () => {
+          window.location.href = "#DIGITAL_TIMER";
           startTimers(timer, duration);
         });
         startTimers(timer, duration);
@@ -85,9 +93,13 @@ export function createTimer() {
     });
   }
 
+  timer.addEventListener("targetAchieved", () => {
+    window.location.href = "#TimesUP-page";
+  });
   abortTimerBtn.forEach(function (abortTimerBtn) {
     abortTimerBtn.addEventListener("click", function () {
       timer.stop();
+      window.location.href = "#TimesUP-page";
 
       console.log("Abort timer button clicked");
     });
