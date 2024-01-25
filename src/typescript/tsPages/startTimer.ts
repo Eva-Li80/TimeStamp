@@ -4,6 +4,7 @@ import { startTimer } from "./numberToTextPage";
 import Timer from "easytimer.js";
 import { CircleTimer } from "./circleTimer";
 import { digitalTimer } from "./digitalTimer";
+import { analogTimer } from "./analogTimer";
 
 export function createTimer() {
   let duration: number = 600;
@@ -116,4 +117,5 @@ function startTimers(timer: Timer, duration: number) {
   startTimer(timer);
   CircleTimer(timer);
   digitalTimer(timer);
+  analogTimer(timer);
 }
