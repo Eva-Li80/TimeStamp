@@ -81,12 +81,27 @@
     </section>
       <!-- -------- -->
 
+      <!-- Analog Timer -->
+
+      <section class="analogTimer" id="analogTimer">
+          <h1 class='analogH1'>Interval</h1>
+          <div class="clock-container">
+                <div class='analog-face'>
+                    <div class="watchlines"></div>
+                    <div class="dot"></div>
+                    <div id="minuteMarker" class="minute-line"></div>
+                    <div id="secondMarker" class="second-line"></div> 
+                </div>
+          </div>
+          <button class="abort-timer">Abort timer</button>
+      </section> 
+
       <!-- Digital Timer -->
 
       <section class="digitalTimer" id="DIGITAL_TIMER">
         <h1 class="digitalH1">Interval</h1>
         <div class="digital-clock">
-          <div class="time">
+          <div class="time-container">
             <span id="digitalMinutes">00</span>
             <span>:</span>
             <span id="digitalSeconds">00</span>

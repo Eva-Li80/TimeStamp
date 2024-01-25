@@ -14,6 +14,7 @@
 @import "./modulePages/timerbarPage";
 @import "./modulePages/circleTimerPage";
 @import "./modulePages/digitalTimer";
+@import "./modulePages/analogTimer";
 
 //base & layout
 @import "./Base/base";
@@ -23,11 +24,8 @@
 // Goran's kod
 
 @import "./Nav-Bar/reset";
-<<<<<<< HEAD
 // @import "./Nav-Bar/body";
-=======
 @import "./Nav-Bar/body"; 
->>>>>>> Goran
 @import "./Nav-Bar/nav";
 @import "./Nav-Bar/sidebar";
 @import "./Nav-Bar/media-queries";
