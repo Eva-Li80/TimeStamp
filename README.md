@@ -11,6 +11,7 @@
 # npm i -D sass
 
 # git repo TimeStamp: ("https://github.com/Eva-Li80/TimeStamp.git")
+# trello (https://trello.com/invite/b/eT8l3yu2/ATTI254463df1b9b15346cecb8160e034f44ED01D2DD/timestamp)
 
 - Isabella sida 1 & 10 --ok
 - Eva-Li sida 5 & 6 --ok
