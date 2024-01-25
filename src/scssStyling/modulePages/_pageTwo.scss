@@ -1,8 +1,7 @@
-@media only screen and (max-width: 600px) {
-  .timer-container {
-    height: 100vh;
-    background-color: $color-gray-dark;
-    @include flexdirection(column);
+.timer-container {
+  height: 100vh;
+  background-color: $color-gray-dark;
+  @include flexdirection(column);
 
     .time-setter {
       @include flexdirection(row);
@@ -23,59 +22,64 @@
         cursor: pointer;
       }
     }
-
-    .options {
-      @include justdirection(column);
-      margin-top: 80px;
-      margin-left: -20px;
-
-      label {
-        @include justdirection(row);
-        width: 100%;
-        margin-bottom: 20px;
-
-        input[type="checkbox"] {
-          margin: 5px;
-        }
-        .intervals {
-          font-size: $base-size-medium;
-          margin-top: 10px;
-        }
-      }
+    button {
+      background: none;
+      color: $color-white;
+      border: 1px solid $color-white;
+      padding: 10px;
+      margin: 1em;
+      font-size: $base-size-xsmall;
+      cursor: pointer;
+      outline: inherit;
+      text-transform: uppercase;
     }
-    #start-timer,
-    #stop-timer {
-      max-width: 150px;
-      padding: 5px 20px;
-      margin-top: 20px;
-      border-radius: 5px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      font-size: $base-size-medium;
+    button:hover {
       cursor: pointer;
     }
   }
-}
 
+  .options {
+    @include justdirection(column);
+    margin: 50px 0;
+
+    label {
+      @include justdirection(row);
+      margin-bottom: 20px;
+      color: $color-white;
+
+      input[type="checkbox"] {
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+      }
+      #interval,
+      #break-interval {
+        font-size: $base-size-medium;
+      }
+    }
+  }
+  #start-timer,
+  #stop-timer {
+    background: none;
+    color: $color-white;
+    border: 1px solid $color-white;
+    padding: 10px;
+    margin: 1em;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    text-transform: uppercase;
+  }
+}
 @media only screen and (min-width: 601px) {
   .timer-container {
-    height: 100vh;
-    background-color: $color-gray-dark;
-    @include flexdirection(column);
-
     .time-setter {
       @include flexdirection(row);
       margin-top: 20px;
 
       #time-display {
-        margin: 20px;
-        font-size: $base-size-large;
-        color: whitesmoke;
-        padding: 5px;
-        border-radius: 5px;
-      }
-      #time-display {
-        font-size: $base-size-xlarge;
+        font-size: $base-size-xllarge;
+        margin: 25px;
       }
       i {
         color: $color-white;
@@ -87,33 +91,20 @@
     }
 
     .options {
-      @include justdirection(column);
-      margin-top: 80px;
-      margin-left: -20px;
-
       label {
-        @include justdirection(row);
-        width: 100%;
-        margin-bottom: 20px;
-
         input[type="checkbox"] {
-          margin: 5px;
+          width: 30px;
+          height: 30px;
         }
-        .intervals {
-          font-size: $base-size-medium;
-          margin-top: 10px;
+        #interval,
+        #break-interval {
+          font-size: $base-size-large;
         }
       }
     }
-    .start-button,
-    .stop-button {
-      padding: 10px 50px;
-      margin-top: 20px;
-      border-radius: 5px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      font-size: $base-size-medium;
-      cursor: pointer;
+    #start-timer,
+    #stop-timer {
+      font-size: $base-size-large;
     }
   }
 }

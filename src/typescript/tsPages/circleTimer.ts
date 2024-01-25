@@ -35,4 +35,29 @@ export function CircleTimer(timer: Timer) {
       num = 9;
     }
   });
+
+  timer.addEventListener("targetAchieved", (e) => {
+    if (text) {
+      text.innerHTML = "00.00";
+    }
+    circleelements.forEach((e) => {
+      e.classList.toggle("orange");
+    });
+  });
+
+  timer.addEventListener("stopped", (e) => {
+    if (text) {
+      text.innerHTML = "00.00";
+    }
+    circleelements.forEach((e) => {
+      if (e.classList.contains("orange")) {
+        e.classList.toggle("orange");
+      }
+    });
+    circleelementsMobile.forEach((e) => {
+      if (e.classList.contains("orange")) {
+        e.classList.toggle("orange");
+      }
+    });
+  });
 }
