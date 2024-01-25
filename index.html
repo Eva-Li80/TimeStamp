@@ -15,7 +15,7 @@
   <header class="primary-header">
   <nav>
     <ul id="menu" class="sidebar">
-        <li onclick=hideSidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li id="menu-close-icon"><a><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
         <!-- <li><a href="#MENY">MENY</a></li> -->
         <li><a href="#ANALOG_TIMER">ANALOG TIMER</a></li>
         <li><a href="#DIGITAL_TIMER">DIGITAL TIMER</a></li>
@@ -30,7 +30,7 @@
         <li class="hideOnMobile"><a href="#VISUAL_TIMER">VISUAL TIMER</a></li>
         <li class="hideOnMobile"><a href="#TEXT_TIMER">TEXT TIMER</a></li>
         <li class="hideOnMobile"><a href="#CIRCLES_TIMER">CIRCLES TIMER</a></li>
-        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        <li id="menu-open-icon" class="menu-button" ><a><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
     </ul>
 </nav>
 </header>
@@ -45,19 +45,6 @@
         <p>For all your timing needs.</p>
       </div>
 
-      <script>
-        // Hämta referens till meny och ikon
-        const menu = document.getElementById("menu");
-        const menuIcon = document.querySelector(".bx-menu");
-      
-        // Funktion för att visa/dölja menyn
-        function toggleMenu() {
-          menu.style.display = (menu.style.display === "none" || menu.style.display === "") ? "flex" : "none";
-        }
-      
-        // Lägg till klickhändelse till ikonen
-        menuIcon.addEventListener("click", toggleMenu);
-      </script>
 
       <!-- TIMER START PAGE-->
       <section class="start-timer1" id="start-timer1">
@@ -186,16 +173,7 @@
 <!-- slut på Goran's kod Times-UP-->
 
     <!--Goran's kod-->
-    <script>
-      function showSidebar() {
-        const sidebar = document.querySelector(".sidebar");
-        sidebar.style.display = "flex";
-      }
-      function hideSidebar() {
-        const sidebar = document.querySelector(".sidebar");
-        sidebar.style.display = "none";
-      }
-    </script>
+  
     <!-- slut på Goran's kod-->
     <script type="module" src="./src/typescript/main.ts"></script>
   </body>
