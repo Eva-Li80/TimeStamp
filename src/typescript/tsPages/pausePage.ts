@@ -13,6 +13,9 @@ export function pauseTimerPage(timer: Timer) {
     timer.addEventListener("targetAchieved", function (e) {
       values.innerHTML = "Pause over";
     });
+    timer.addEventListener("stopped", function (e) {
+      values.innerHTML = "Pause stopped";
+    });
   }
 
   const button = document.getElementById("pause-btn");

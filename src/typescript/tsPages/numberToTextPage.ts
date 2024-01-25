@@ -16,7 +16,16 @@ export function startTimer(timer: Timer): void {
   });
 
   timer.addEventListener("targetAchieved", () => {
-    console.log("Tiden är ute!");
+    if (dynamicMinutes && dynamicSeconds) {
+      dynamicMinutes.textContent = "";
+      dynamicSeconds.textContent = "";
+    }
+  });
+  timer.addEventListener("stopped", () => {
+    if (dynamicMinutes && dynamicSeconds) {
+      dynamicMinutes.textContent = "";
+      dynamicSeconds.textContent = "";
+    }
   });
 }
 
