@@ -1,54 +1,55 @@
 /* Goran's kod */
 
 //Navigation sticky
-.primary-header{
-    position: sticky;
-    top: 0;
+.primary-header {
+  position: sticky;
+  top: 0;
 }
 
 // Navigation styles
 nav {
-    background-color: $color-gray-dark;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, .1);
+  background-color: $color-gray-dark;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
 
-    // Navigation list styles
-    ul {
-        width: 100%;
-        list-style: none;
+  // Navigation list styles
+  ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    // Navigation list item styles
+    li {
+      height: 50px;
+
+      // Navigation link styles
+      a {
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
         display: flex;
-        justify-content: flex-end;
         align-items: center;
+        justify-content: center;
+        color: rgb(221, 111, 8);
+        font-size: 20px;
 
-        // Navigation list item styles
-        li {
-            height: 50px;
-
-            // Navigation link styles
-            a {
-                height: 100%;
-                padding: 0 30px;
-                text-decoration: none;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: rgb(221, 111, 8);
-                font-size: 20px;
-
-                &:hover {
-                    background-color: #f0f0f0;
-                }
-            }
-
-            &:first-child {
-                margin-right: auto;
-            }
+        &:hover {
+          background-color: #f0f0f0;
         }
+      }
+
+      &:first-child {
+        margin-right: auto;
+      }
     }
+  }
 }
 
-ul img{
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
+ul img {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
 }
 /* slut på Goran's kod */

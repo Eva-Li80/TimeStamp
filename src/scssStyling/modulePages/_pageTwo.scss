@@ -7,19 +7,19 @@
     .time-setter {
       @include flexdirection(row);
       margin-top: 20px;
-      button,
+
       #time-display {
         margin: 5px;
-        font-size: $base-size-medium;
+        font-size: $base-size-large;
         color: whitesmoke;
         padding: 3px;
         border-radius: 5px;
       }
-      button {
-        color: $color-gray-medium;
-        margin: 5px;
+      i {
+        color: $color-white;
+        font-size: 3em;
       }
-      button:hover {
+      i:hover {
         cursor: pointer;
       }
     }
@@ -66,7 +66,7 @@
     .time-setter {
       @include flexdirection(row);
       margin-top: 20px;
-      button,
+
       #time-display {
         margin: 20px;
         font-size: $base-size-large;
@@ -77,11 +77,11 @@
       #time-display {
         font-size: $base-size-xlarge;
       }
-      button {
-        color: $color-gray-medium;
-        margin: 40px;
+      i {
+        color: $color-white;
+        font-size: 5em;
       }
-      button:hover {
+      i:hover {
         cursor: pointer;
       }
     }

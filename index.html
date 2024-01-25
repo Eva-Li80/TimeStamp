@@ -49,9 +49,11 @@
       <section class="start-timer1" id="start-timer1">
       <div class="timer-container">
         <div class="time-setter">
-          <button id="decrease-time" class="time-adjust">Decrease</button>
+          <i id="decrease-time" class="time-adjust  bx bx-chevron-left"></i>
+       
           <div id="time-display" class="time-display">10 minutes</div>
-          <button id="increase-time" class="time-adjust">Increase</button>
+          <i id="increase-time" class='time-adjust bx bx-chevron-right'></i>
+   
         </div>
         <div class="options">
           <label>
@@ -60,7 +62,7 @@
           <label for="break-interval">  <input type="checkbox" id="break-interval" /> 5 min break / interval</label>
         </div>
         <button id="start-timer" class="start-button">START TIMER</button>
-        <button id="stop-timer" class="abort-timer">STOP TIMER</button>
+      
       </div>
     </section>
       <!-- -------- -->
@@ -146,12 +148,12 @@
           </div>
           <!-- mobile -->
           <div class="circle-mobile">
-             <svg id="circle-svg-mobile" width="400" height="400">
-             <circle  class="grey" id="circle1" cx="200" cy="200" r="25"></circle>
-                 <circle  class="grey" id="circle2" cx="200" cy="200" r="50"></circle>
-      <circle  class="grey" id="circle3" cx="200" cy="200" r="75"></circle>
-      <circle  class="grey" id="circle4" cx="200" cy="200" r="100"></circle>
-      <circle  class="grey" id="circle5" cx="200" cy="200" r="125"></circle>
+             <svg id="circle-svg-mobile" width="300" height="300">
+             <circle  class="grey" id="circle1" cx="150" cy="150" r="25"></circle>
+                 <circle  class="grey" id="circle2" cx="150" cy="150" r="50"></circle>
+      <circle  class="grey" id="circle3" cx="150" cy="150" r="75"></circle>
+      <circle  class="grey" id="circle4" cx="150" cy="150" r="100"></circle>
+      <circle  class="grey" id="circle5" cx="150" cy="150" r="125"></circle>
       </svg>
           </div>
           <p id="circle-timer-text"></p>

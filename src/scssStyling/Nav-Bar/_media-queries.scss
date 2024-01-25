@@ -1,21 +1,21 @@
 /* Goran's kod */
-// Responsive stil för att förändra till mobil storlek 
-@media (max-width: 800px) {
-    // gömd på mobile styles
-    .hideOnMobile {
-        display: none;
-    }
+// Responsive stil för att förändra till mobil storlek
+@media (max-width: 900px) {
+  // gömd på mobile styles
+  .hideOnMobile {
+    display: none;
+  }
 
-    // Meny knap styles för mobil
-    .menu-button {
-        display: block;
-        color: $goran-main-color;
-    }
+  // Meny knap styles för mobil
+  .menu-button {
+    display: block;
+    color: $goran-main-color;
+  }
 
-    // Sidebar styles för mobil
-    .sidebar {
-        width: 100%;
-    }
-} 
+  // Sidebar styles för mobil
+  .sidebar {
+    width: 100%;
+  }
+}
 
 /* slut på Goran's kod */
