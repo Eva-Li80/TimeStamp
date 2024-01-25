@@ -1,6 +1,6 @@
 import { pauseTimerPage } from "./pausePage";
 import { getTimerBar } from "./timerBarPage";
-import { startTimer } from "./numberToTextPage";
+import { getNumberToText } from "./numberToTextPage";
 import Timer from "easytimer.js";
 import { CircleTimer } from "./circleTimer";
 import { digitalTimer } from "./digitalTimer";
@@ -114,7 +114,7 @@ function startTimers(timer: Timer, duration: number) {
   });
   //Starta klockorna här
   getTimerBar(timer);
-  startTimer(timer);
+  getNumberToText(timer);
   CircleTimer(timer);
   digitalTimer(timer);
   analogTimer(timer);
