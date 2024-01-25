@@ -11,12 +11,11 @@
 
 </head>
 <body>
-  <!--Goran's kod NavBar-->
+  <!--NavBar-->
   <header class="primary-header">
   <nav>
     <ul id="menu" class="sidebar">
         <li id="menu-close-icon"><a><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-        <!-- <li><a href="#MENY">MENY</a></li> -->
         <li id="menu-ANALOG_TIMER"><a href="#ANALOG_TIMER">ANALOG TIMER</a></li>
         <li id="menu-DIGITAL_TIMER"><a href="#DIGITAL_TIMER">DIGITAL TIMER</a></li>
         <li id="menu-VISUAL_TIMER"><a href="#VISUAL_TIMER">VISUAL TIMER</a></li>
@@ -36,8 +35,7 @@
     </ul>
 </nav>
 </header>
-
-    <!-- slut på Goran's kod-->
+<!-- ------ -->
     <div id="app">
 
       <!--START-PAGE-->
@@ -46,7 +44,6 @@
         <h1>INTERVAL</h1>
         <p>For all your timing needs.</p>
       </div>
-
 
       <!-- TIMER START PAGE-->
       <section class="start-timer1" id="start-timer1">
@@ -58,9 +55,7 @@
         </div>
         <div class="options">
           <label>
-            <input type="checkbox" id="interval" />
-            interval</label
-          >
+            <input type="checkbox" id="interval" />interval</label>
          
           <label for="break-interval">  <input type="checkbox" id="break-interval" /> 5 min break / interval</label>
         </div>
@@ -71,7 +66,6 @@
       <!-- -------- -->
 
       <!-- Digital Timer -->
-
       <section class="digitalTimer" id="DIGITAL_TIMER">
         <h1 class="digitalH1">Interval</h1>
         <div class="digital-clock">
@@ -130,6 +124,7 @@
           </div>
         </div>
       </section>
+
       <!-- CIRCLE TIMER -->
       <section class="CIRCLES_TIMER" id="CIRCLES_TIMER">
         <div class="page-7">
@@ -160,23 +155,18 @@
       </svg>
           </div>
           <p id="circle-timer-text"></p>
-          
           <button class="abort-timer" >Abort Timer</button>
         </div>
       </section>
       
-      <!--Goran's kod Alarm-->
+      <!--Alarm-->
   <div class="TimesUP-page" id="TimesUP-page">
     <i id="alarm" class='bx bx-alarm-exclamation bx-tada'></i>
     <h1>Times UP..!</h1>
     <button id="newTime-btn" onclick="location.href='#start-timer1'">SET NEW TIMER</button>
   </div>
   </div>
-<!-- slut på Goran's kod Times-UP-->
 
-    <!--Goran's kod-->
-  
-    <!-- slut på Goran's kod-->
     <script type="module" src="./src/typescript/main.ts"></script>
   </body>
 </html>
